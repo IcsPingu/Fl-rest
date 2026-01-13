@@ -1,0 +1,7 @@
+torch
+torchvision
+Flask
+requests
+numpy
+psutil
+tensorboard

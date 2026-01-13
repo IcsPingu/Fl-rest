@@ -1,0 +1,44 @@
+# config.py
+
+# --- Server Configuration ---
+MODEL_NAME = "SimpleCNN"
+AGGREGATION_STRATEGY = "FedAvgM" 
+SERVER_LEARNING_RATE = 1.0       
+SERVER_MOMENTUM = 0.9            
+DEVICE = "auto"
+TOTAL_ROUNDS = 10
+SAVED_MODEL_NAME = "final_global_model.pth"
+
+# --- Client Limits (AJUSTADO PARA SEU SERVIDOR) ---
+# Se você tem 8 clientes, o servidor deve esperar exatamente 8.
+MIN_CLIENTS_PER_ROUND = 4
+MIN_CLIENTS_FOR_AGGREGATION = 4
+
+# --- Client Configuration ---
+TOTAL_CLIENTS = 8
+LOCAL_EPOCHS = 3
+BATCH_SIZE = 32
+LEARNING_RATE = 0.01
+MOMENTUM = 0.9
+POLL_INTERVAL = 10
+
+# --- Data Configuration (Non-IID) ---
+DIRICHLET_ALPHA = 0.5
+RANDOM_SEED = 42
+
+# --- Simulation of FL Conditions ---
+CLIENT_DROPOUT_RATE = 0.0
+ROUND_TIMEOUT_SEC = 300
+SLOW_SENDER_RATE = 0.0
+SLOW_SENDER_DELAY_SEC = 30
+NETWORK_LATENCY_RATE = 0.0
+NETWORK_LATENCY_DELAY_SEC = 5
+
+# --- FEDPROX CONFIGURATION (Cenário C) ---
+FEDPROX_MU = 0.01 
+
+# --- KNOWLEDGE DISTILLATION CONFIGURATION (Cenário C) ---
+ENABLE_PARAMETER_BASED_KD = True  # LIGADO (Professor)
+ENABLE_FEATURE_BASED_KD = False   # DESLIGADO
+KD_TEMPERATURE = 3.0
+KD_ALPHA = 0.5
