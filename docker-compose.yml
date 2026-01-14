@@ -1,5 +1,4 @@
 
-version: '3.8'
 
 # Template base para todos os clientes (evita repetição)
 x-client-template: &client-template

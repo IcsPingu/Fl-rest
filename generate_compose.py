@@ -5,7 +5,6 @@ import sys
 # 1. CABEÇALHO DO DOCKER COMPOSE (Fixos)
 # ==========================================
 YAML_HEADER = """
-version: '3.8'
 
 # Template base para todos os clientes (evita repetição)
 x-client-template: &client-template
