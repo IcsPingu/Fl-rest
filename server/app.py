@@ -20,6 +20,7 @@ from torch.utils.tensorboard import SummaryWriter
 from shared.models import get_model
 from server.strategies import get_strategy 
 import config
+from server.aggregator import federated_average
 
 # --- 1. CONFIGURAÇÃO DE LOG (MOVIDO PARA O TOPO) ---
 logging.basicConfig(level=logging.INFO, format='INFO:%(name)s:%(message)s')
@@ -254,7 +255,20 @@ def check_and_aggregate(test_loader):
         for update in fl_state["client_updates"]:
             valid_updates.append(update)
         
-        new_global_model_tensors = aggregate_models(valid_updates)
+        # --- FIX: Convert to Dictionary format for your Custom Aggregator ---
+        # Your aggregator expects: {client_id: {'state_dict': ..., 'num_samples': ...}}
+        updates_dict = {
+            u['client_id']: {
+                'state_dict': u['model_update'], 
+                'num_samples': u['num_samples']
+            }
+            for u in valid_updates
+        }
+
+        # CALL YOUR CUSTOM FUNCTION
+        logger.info("⚡ Using Custom Aggregator with Drift Metric...")
+        new_global_model_tensors = federated_average(updates_dict)
+        # -------------------------------------------------------------------
         logger.info(f"Aggregation complete.")
         
         if new_global_model_tensors:
@@ -363,6 +377,20 @@ def submit_update():
         client_id = metadata.get('client_id')
         num_samples = metadata.get('num_samples')
         metrics = metadata.get('metrics', {}) 
+
+        # --- START OF NEW CODE ---
+        # Extract and Log the time explicitly to the terminal and a CSV
+        train_time = metrics.get('training_time_sec', 0.0)
+        
+        # 1. Print to Docker Logs (so you see it in "docker-compose up")
+        print(f"⏱️ [TIME] Client {client_id} finished training in {train_time:.2f}s")
+        
+        # 2. Save to CSV (for easy graphing later)
+        # Saves as: Round, ClientID, Seconds
+        with open("training_times.csv", "a") as f:
+            f.write(f"{fl_state['current_round']},{client_id},{train_time}\n")
+        # --- END OF NEW CODE ---
+
         file_bytes = request.files['model'].read()
         client_state_dict = torch.load(io.BytesIO(file_bytes), map_location='cpu')
         

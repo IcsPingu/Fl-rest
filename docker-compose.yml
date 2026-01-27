@@ -139,13 +139,18 @@ services:
     environment:
       - CLIENT_ID=client_005
       - SERVER_URL=http://server:5000
-      - TRAIN_FRACTION=0.5 
+      - TRAIN_FRACTION=1.0 
     labels:
       - "com.docker-tc.enabled=1"
-      - "com.docker-tc.limit=5mbps"
-      - "com.docker-tc.delay=200ms"
-      - "com.docker-tc.loss=1%"
-    # Removemos limite de CPU para evitar travamentos no boot
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
   client_006:
     <<: *client-template
@@ -154,13 +159,18 @@ services:
     environment:
       - CLIENT_ID=client_006
       - SERVER_URL=http://server:5000
-      - TRAIN_FRACTION=0.5 
+      - TRAIN_FRACTION=1.0 
     labels:
       - "com.docker-tc.enabled=1"
-      - "com.docker-tc.limit=5mbps"
-      - "com.docker-tc.delay=200ms"
-      - "com.docker-tc.loss=1%"
-    # Removemos limite de CPU para evitar travamentos no boot
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
   client_007:
     <<: *client-template
@@ -168,6 +178,86 @@ services:
     command: python -m client.app
     environment:
       - CLIENT_ID=client_007
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=1.0 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  client_008:
+    <<: *client-template
+    container_name: fl-rest_client_008_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_008
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=1.0 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  client_009:
+    <<: *client-template
+    container_name: fl-rest_client_009_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_009
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=1.0 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  client_010:
+    <<: *client-template
+    container_name: fl-rest_client_010_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_010
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=1.0 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=1gbit"
+      - "com.docker-tc.delay=20ms"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  client_011:
+    <<: *client-template
+    container_name: fl-rest_client_011_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_011
       - SERVER_URL=http://server:5000
       - TRAIN_FRACTION=0.5 
     labels:
@@ -177,12 +267,132 @@ services:
       - "com.docker-tc.loss=1%"
     # Removemos limite de CPU para evitar travamentos no boot
 
-  client_008:
+  client_012:
     <<: *client-template
-    container_name: fl-rest_client_008_1
+    container_name: fl-rest_client_012_1
     command: python -m client.app
     environment:
-      - CLIENT_ID=client_008
+      - CLIENT_ID=client_012
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_013:
+    <<: *client-template
+    container_name: fl-rest_client_013_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_013
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_014:
+    <<: *client-template
+    container_name: fl-rest_client_014_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_014
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_015:
+    <<: *client-template
+    container_name: fl-rest_client_015_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_015
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_016:
+    <<: *client-template
+    container_name: fl-rest_client_016_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_016
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_017:
+    <<: *client-template
+    container_name: fl-rest_client_017_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_017
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_018:
+    <<: *client-template
+    container_name: fl-rest_client_018_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_018
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_019:
+    <<: *client-template
+    container_name: fl-rest_client_019_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_019
+      - SERVER_URL=http://server:5000
+      - TRAIN_FRACTION=0.5 
+    labels:
+      - "com.docker-tc.enabled=1"
+      - "com.docker-tc.limit=5mbps"
+      - "com.docker-tc.delay=200ms"
+      - "com.docker-tc.loss=1%"
+    # Removemos limite de CPU para evitar travamentos no boot
+
+  client_020:
+    <<: *client-template
+    container_name: fl-rest_client_020_1
+    command: python -m client.app
+    environment:
+      - CLIENT_ID=client_020
       - SERVER_URL=http://server:5000
       - TRAIN_FRACTION=0.5 
     labels:

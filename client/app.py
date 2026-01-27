@@ -88,6 +88,9 @@ def check_server_status():
 def get_client_dataloader(client_id_str):
     """Loads specific partition based on Client ID (e.g., client_001)."""
     transform = transforms.Compose([
+        # --- ADD THESE TWO LINES FOR ACCURACY ---
+        transforms.RandomCrop(32, padding=4),
+        transforms.RandomHorizontalFlip(),
         transforms.ToTensor(), 
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])

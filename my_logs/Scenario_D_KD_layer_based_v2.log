@@ -1,0 +1,1831 @@
+using --exit-code-from implies --abort-on-container-exit
+Creating fl-rest_server_1 ... 
+Creating docker-tc        ... 
+Creating docker-tc        ... done
+Creating fl-rest_server_1 ... done
+Creating fl-rest_client_020_1 ... 
+Creating fl-rest_client_009_1 ... 
+Creating fl-rest_client_007_1 ... 
+Creating fl-rest_client_001_1 ... 
+Creating fl-rest_client_005_1 ... 
+Creating fl-rest_client_010_1 ... 
+Creating fl-rest_client_003_1 ... 
+Creating fl-rest_client_016_1 ... 
+Creating fl-rest_client_019_1 ... 
+Creating fl-rest_client_008_1 ... 
+Creating fl-rest_client_017_1 ... 
+Creating fl-rest_client_015_1 ... 
+Creating fl-rest_client_014_1 ... 
+Creating fl-rest_client_011_1 ... 
+Creating fl-rest_client_006_1 ... 
+Creating fl-rest_client_012_1 ... 
+Creating fl-rest_client_002_1 ... 
+Creating fl-rest_client_013_1 ... 
+Creating fl-rest_client_004_1 ... 
+Creating fl-rest_client_018_1 ... 
+Creating fl-rest_client_020_1 ... done
+Creating fl-rest_client_009_1 ... done
+Creating fl-rest_client_017_1 ... done
+Creating fl-rest_client_011_1 ... done
+Creating fl-rest_client_010_1 ... done
+Creating fl-rest_client_001_1 ... done
+Creating fl-rest_client_016_1 ... done
+Creating fl-rest_client_008_1 ... done
+Creating fl-rest_client_005_1 ... done
+Creating fl-rest_client_007_1 ... done
+Creating fl-rest_client_003_1 ... done
+Creating fl-rest_client_013_1 ... done
+Creating fl-rest_client_012_1 ... done
+Creating fl-rest_client_018_1 ... done
+Creating fl-rest_client_015_1 ... done
+Creating fl-rest_client_019_1 ... done
+Creating fl-rest_client_014_1 ... done
+Creating fl-rest_client_004_1 ... done
+Creating fl-rest_client_006_1 ... done
+Creating fl-rest_client_002_1 ... done
+Attaching to docker-tc, fl-rest_server_1, fl-rest_client_020_1, fl-rest_client_009_1, fl-rest_client_017_1, fl-rest_client_011_1, fl-rest_client_010_1, fl-rest_client_001_1, fl-rest_client_016_1, fl-rest_client_008_1, fl-rest_client_005_1, fl-rest_client_007_1, fl-rest_client_003_1, fl-rest_client_013_1, fl-rest_client_012_1, fl-rest_client_018_1, fl-rest_client_015_1, fl-rest_client_019_1, fl-rest_client_014_1, fl-rest_client_004_1, fl-rest_client_006_1, fl-rest_client_002_1
+[36mdocker-tc     |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[36mdocker-tc     |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mdocker-tc     |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[36mdocker-tc     |[0m [fix-attrs.d] done.
+[36mdocker-tc     |[0m [cont-init.d] executing container initialization scripts...
+[36mdocker-tc     |[0m [cont-init.d] 00-init: executing... 
+[36mdocker-tc     |[0m [cont-init.d] 00-init: exited 0.
+[36mdocker-tc     |[0m [cont-init.d] done.
+[36mdocker-tc     |[0m [services.d] starting services
+[36mdocker-tc     |[0m Starting garbage collector
+[36mdocker-tc     |[0m Starting HTTP server on 127.0.0.1:4080
+[36mdocker-tc     |[0m + exec hapttic -file /docker-tc/bin/httpd.sh -logErrors -host 127.0.0.1 -port 4080
+[33mserver_1      |[0m TensorFlow installation not found - running with reduced feature set.
+[36mdocker-tc     |[0m [services.d] done.
+[33mserver_1      |[0m 
+[33mserver_1      |[0m NOTE: Using experimental fast data loading logic. To disable, pass
+[33mserver_1      |[0m     "--load_fast=false" and report issues on GitHub. More details:
+[33mserver_1      |[0m     https://github.com/tensorflow/tensorboard/issues/4784
+[33mserver_1      |[0m 
+[36mdocker-tc     |[0m 2026/01/20 19:48:40 Thanks for using hapttic v1.0.0
+[36mdocker-tc     |[0m 2026/01/20 19:48:40 Listening on 127.0.0.1:4080
+[36mdocker-tc     |[0m 2026/01/20 19:48:40 Forwarding requests to /docker-tc/bin/httpd.sh
+[36mdocker-tc     |[0m 2026/01/20 19:48:40 Logging errors to stderr
+[33mserver_1      |[0m TensorBoard 2.20.0 at http://0.0.0.0:6006/ (Press CTRL+C to quit)
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m  ____          _              _____         ___ ___ _        _____         _           _
+[36mdocker-tc     |[0m |    \ ___ ___| |_ ___ ___   |_   _|___ ___|  _|  _|_|___   |     |___ ___| |_ ___ ___| |
+[36mdocker-tc     |[0m |  |  | . |  _| '_| -_|  _|    | | |  _| .'|  _|  _| |  _|  |   --| . |   |  _|  _| . | |
+[36mdocker-tc     |[0m |____/|___|___|_,_|___|_|      |_| |_| |__,|_| |_| |_|___|  |_____|___|_|_|_| |_| |___|_|
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m Starting Docker Traffic Control 18.12
+[36mdocker-tc     |[0m https://github.com/lukaszlach/docker-tc
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [3bea7a5ffa23] Notice: Skipping container, service was disabled by label
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [bd19146b9070] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [438bf01636a0] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [c314c85387cb] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [dee0259388ad] Set delay=100ms on vetha11a307
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [dee0259388ad] Set bandwidth-limit=1mbit on vetha11a307
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [dee0259388ad] Controlling traffic of the container /fl_rodrigues_rodrigues_20260119_122803-server-1 on vetha11a307
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [05e3cc69009a] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [b7033350e7df] Set delay=200ms, loss=1% on veth67dcc54
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [b7033350e7df] Set bandwidth-limit=5mbps on veth67dcc54
+[36mdocker-tc     |[0m [2026-01-20T19:48:40+00:00] [b7033350e7df] Controlling traffic of the container /fl-rest_client_020_1 on veth67dcc54
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [0887319f4a0c] Set delay=20ms on veth955948a
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [0887319f4a0c] Set bandwidth-limit=1gbit on veth955948a
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [0887319f4a0c] Controlling traffic of the container /fl-rest_client_009_1 on veth955948a
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [478987a0fa41] Set delay=200ms, loss=1% on veth4dbfef3
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [478987a0fa41] Set bandwidth-limit=5mbps on veth4dbfef3
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [478987a0fa41] Controlling traffic of the container /fl-rest_client_017_1 on veth4dbfef3
+[33mserver_1      |[0m INFO:__main__:Writing TensorBoard logs to: fl_logs/tensorboard/Cenario_A_Parametros_OnlyKD_1948
+[33mserver_1      |[0m INFO:__main__:Loading CIFAR-10 test dataset...
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [d2e785ee22e9] Set delay=200ms, loss=1% on veth9fa0ccb
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [d2e785ee22e9] Set bandwidth-limit=5mbps on veth9fa0ccb
+[36mclient_020_1  |[0m 2026-01-20 19:48:41,635 - __main__ - INFO - --- Starting FL Client: client_020 ---
+[36mclient_010_1  |[0m 2026-01-20 19:48:41,639 - __main__ - INFO - --- Starting FL Client: client_010 ---
+[33mclient_001_1  |[0m 2026-01-20 19:48:41,641 - __main__ - INFO - --- Starting FL Client: client_001 ---
+[36mclient_010_1  |[0m 2026-01-20 19:48:41,642 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x770c32498dc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[33mclient_001_1  |[0m 2026-01-20 19:48:41,642 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71f6b7144df0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [d2e785ee22e9] Controlling traffic of the container /fl-rest_client_011_1 on veth9fa0ccb
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:41,682 - __main__ - INFO - --- Starting FL Client: client_005 ---
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:41,684 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7e2a4eb44dc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[35mclient_013_1  |[0m 2026-01-20 19:48:41,757 - __main__ - INFO - --- Starting FL Client: client_013 ---
+[35mclient_013_1  |[0m 2026-01-20 19:48:41,759 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a14047e8df0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[35;1mclient_018_1  |[0m 2026-01-20 19:48:41,800 - __main__ - INFO - --- Starting FL Client: client_018 ---
+[35;1mclient_018_1  |[0m 2026-01-20 19:48:41,802 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b183ef44dc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[33;1mclient_016_1  |[0m 2026-01-20 19:48:41,832 - __main__ - INFO - --- Starting FL Client: client_016 ---
+[33;1mclient_016_1  |[0m 2026-01-20 19:48:41,834 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x745bf5028df0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [735e131472fc] Set delay=20ms on veth7b2f7bb
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [735e131472fc] Set bandwidth-limit=1gbit on veth7b2f7bb
+[36mdocker-tc     |[0m [2026-01-20T19:48:41+00:00] [735e131472fc] Controlling traffic of the container /fl-rest_client_010_1 on veth7b2f7bb
+[36;1mclient_015_1  |[0m 2026-01-20 19:48:41,891 - __main__ - INFO - --- Starting FL Client: client_015 ---
+[36;1mclient_015_1  |[0m 2026-01-20 19:48:41,893 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x6ffea8850dc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[35mclient_003_1  |[0m 2026-01-20 19:48:41,986 - __main__ - INFO - --- Starting FL Client: client_003 ---
+[35mclient_003_1  |[0m 2026-01-20 19:48:41,988 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a81778ecdc0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[33mserver_1      |[0m INFO:__main__:Test dataset loaded.
+[34;1mclient_019_1  |[0m 2026-01-20 19:48:41,996 - __main__ - INFO - --- Starting FL Client: client_019 ---
+[33mserver_1      |[0m INFO:__main__:Initial model for round 0 created.
+[33mserver_1      |[0m Files already downloaded and verified
+[33mserver_1      |[0m  * Serving Flask app 'app'
+[33mserver_1      |[0m  * Debug mode: off
+[33mclient_011_1  |[0m 2026-01-20 19:48:41,998 - __main__ - INFO - --- Starting FL Client: client_011 ---
+[33mserver_1      |[0m INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[33mserver_1      |[0m  * Running on all addresses (0.0.0.0)
+[33mserver_1      |[0m  * Running on http://127.0.0.1:5000
+[33mserver_1      |[0m  * Running on http://172.18.0.2:5000
+[33mserver_1      |[0m INFO:werkzeug:[33mPress CTRL+C to quit[0m
+[33mserver_1      |[0m INFO:__main__:Client client_019 registered.
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 0. Timeout: 300s ---
+[34;1mclient_019_1  |[0m 2026-01-20 19:48:42,001 - __main__ - INFO - ✅ Registered with server successfully.
+[32mclient_012_1  |[0m 2026-01-20 19:48:42,013 - __main__ - INFO - --- Starting FL Client: client_012 ---
+[33mserver_1      |[0m INFO:__main__:Client client_012 registered.
+[32mclient_012_1  |[0m 2026-01-20 19:48:42,017 - __main__ - INFO - ✅ Registered with server successfully.
+[32;1mclient_017_1  |[0m 2026-01-20 19:48:42,026 - __main__ - INFO - --- Starting FL Client: client_017 ---
+[36mclient_020_1  |[0m 2026-01-20 19:48:42,037 - __main__ - WARNING - Registration attempt 1 failed: HTTPConnectionPool(host='server', port=5000): Max retries exceeded with url: /register (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7b7927328d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:42,067 - __main__ - INFO - --- Starting FL Client: client_009 ---
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [e12046b43209] Set delay=20ms on veth828eb35
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [e12046b43209] Set bandwidth-limit=1gbit on veth828eb35
+[34mclient_004_1  |[0m 2026-01-20 19:48:42,087 - __main__ - INFO - --- Starting FL Client: client_004 ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:42,088 - __main__ - INFO - --- Starting FL Client: client_007 ---
+[33mserver_1      |[0m INFO:__main__:Client client_004 registered.
+[33mserver_1      |[0m INFO:__main__:Client client_007 registered.
+[34mclient_004_1  |[0m 2026-01-20 19:48:42,091 - __main__ - INFO - ✅ Registered with server successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:42,092 - __main__ - INFO - ✅ Registered with server successfully.
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [e12046b43209] Controlling traffic of the container /fl-rest_client_001_1 on veth828eb35
+[33mserver_1      |[0m INFO:__main__:Client client_009 registered.
+[32mclient_002_1  |[0m 2026-01-20 19:48:42,139 - __main__ - INFO - --- Starting FL Client: client_002 ---
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:42,141 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_002 registered.
+[34mclient_014_1  |[0m 2026-01-20 19:48:42,142 - __main__ - INFO - --- Starting FL Client: client_014 ---
+[32mclient_002_1  |[0m 2026-01-20 19:48:42,143 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_014 registered.
+[34mclient_014_1  |[0m 2026-01-20 19:48:42,146 - __main__ - INFO - ✅ Registered with server successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:42,154 - __main__ - INFO - --- Starting FL Client: client_006 ---
+[33mserver_1      |[0m INFO:__main__:Client client_006 registered.
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:42,158 - __main__ - INFO - ✅ Registered with server successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:42,176 - __main__ - INFO - --- Starting FL Client: client_008 ---
+[33mserver_1      |[0m INFO:__main__:Client client_008 registered.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:42,180 - __main__ - INFO - ✅ Registered with server successfully.
+[34;1mclient_019_1  |[0m 2026-01-20 19:48:42,303 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.18 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [f8490250c0fb] Set delay=200ms, loss=1% on veth58fe100
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [f8490250c0fb] Set bandwidth-limit=5mbps on veth58fe100
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [f8490250c0fb] Controlling traffic of the container /fl-rest_client_016_1 on veth58fe100
+[33mserver_1      |[0m INFO:__main__:Client client_011 registered.
+[32mclient_012_1  |[0m 2026-01-20 19:48:42,420 - __main__ - INFO - --- New Round Detected: 0 ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:42,423 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.15 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Client client_017 registered.
+[32mclient_002_1  |[0m 2026-01-20 19:48:42,503 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[34mclient_014_1  |[0m 2026-01-20 19:48:42,510 - __main__ - INFO - --- New Round Detected: 0 ---
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:42,512 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.19 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mclient_011_1  |[0m 2026-01-20 19:48:42,613 - __main__ - INFO - ✅ Registered with server successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:48:42,617 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:42,636 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [7f4637349cae] Set delay=20ms on vethd34134b
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [7f4637349cae] Set bandwidth-limit=1gbit on vethd34134b
+[32;1mclient_017_1  |[0m 2026-01-20 19:48:42,643 - __main__ - INFO - ✅ Registered with server successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:42,650 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:48:42] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [7f4637349cae] Controlling traffic of the container /fl-rest_client_008_1 on vethd34134b
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [22559abb5b09] Set delay=20ms on vethe1fbd85
+[36mdocker-tc     |[0m [2026-01-20T19:48:42+00:00] [22559abb5b09] Set bandwidth-limit=1gbit on vethe1fbd85
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [22559abb5b09] Controlling traffic of the container /fl-rest_client_005_1 on vethe1fbd85
+[33mclient_011_1  |[0m 2026-01-20 19:48:43,340 - __main__ - INFO - --- New Round Detected: 0 ---
+[32;1mclient_017_1  |[0m 2026-01-20 19:48:43,486 - __main__ - INFO - --- New Round Detected: 0 ---
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [404ebe8ec7f1] Set delay=20ms on vethc31064b
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [404ebe8ec7f1] Set bandwidth-limit=1gbit on vethc31064b
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [404ebe8ec7f1] Controlling traffic of the container /fl-rest_client_007_1 on vethc31064b
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.6 - - [20/Jan/2026 19:48:43] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.5 - - [20/Jan/2026 19:48:43] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [193cb5bba13b] Set delay=20ms on veth75c044d
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [193cb5bba13b] Set bandwidth-limit=1gbit on veth75c044d
+[36mdocker-tc     |[0m [2026-01-20T19:48:43+00:00] [193cb5bba13b] Controlling traffic of the container /fl-rest_client_003_1 on veth75c044d
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [65f627cc61b0] Set delay=200ms, loss=1% on vethe81fe4f
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [65f627cc61b0] Set bandwidth-limit=5mbps on vethe81fe4f
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [65f627cc61b0] Controlling traffic of the container /fl-rest_client_013_1 on vethe81fe4f
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [bfda7cc32303] Set delay=200ms, loss=1% on vethd1a77cf
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [bfda7cc32303] Set bandwidth-limit=5mbps on vethd1a77cf
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [bfda7cc32303] Controlling traffic of the container /fl-rest_client_012_1 on vethd1a77cf
+[33mserver_1      |[0m INFO:__main__:Client client_010 registered.
+[33mserver_1      |[0m INFO:__main__:Client client_001 registered.
+[33mclient_001_1  |[0m 2026-01-20 19:48:44,701 - __main__ - INFO - ✅ Registered with server successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:48:44,698 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_005 registered.
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:44,740 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_018 registered.
+[35;1mclient_018_1  |[0m 2026-01-20 19:48:44,809 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_015 registered.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:44,936 - __main__ - INFO - Round 0 finished. Loss: 1.9288, Acc: 31.16%
+[36;1mclient_015_1  |[0m 2026-01-20 19:48:44,910 - __main__ - INFO - ✅ Registered with server successfully.
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [4a50fcdaf6a7] Set delay=200ms, loss=1% on vethb8fcb62
+[36mdocker-tc     |[0m [2026-01-20T19:48:44+00:00] [4a50fcdaf6a7] Set bandwidth-limit=5mbps on vethb8fcb62
+[33mserver_1      |[0m INFO:__main__:Client client_013 registered.
+[33mserver_1      |[0m INFO:__main__:Client client_003 registered.
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:45,031 - __main__ - INFO - Round 0 finished. Loss: 1.3311, Acc: 50.66%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:48:45] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:48:45,048 - __main__ - INFO - ✅ Registered with server successfully.
+[33mserver_1      |[0m INFO:__main__:Client client_016 registered.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:45,076 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:45,076 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[36mdocker-tc     |[0m [2026-01-20T19:48:45+00:00] [4a50fcdaf6a7] Controlling traffic of the container /fl-rest_client_018_1 on vethb8fcb62
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:48:45] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:45,168 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:45,168 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[35mclient_013_1  |[0m 2026-01-20 19:48:45,175 - __main__ - INFO - ✅ Registered with server successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:48:45,177 - __main__ - INFO - --- New Round Detected: 0 ---
+[36mclient_010_1  |[0m 2026-01-20 19:48:45,203 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Client client_020 registered.
+[33;1mclient_016_1  |[0m 2026-01-20 19:48:45,262 - __main__ - INFO - ✅ Registered with server successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:45,270 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36;1mclient_015_1  |[0m 2026-01-20 19:48:45,328 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.17 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mclient_020_1  |[0m 2026-01-20 19:48:45,454 - __main__ - INFO - ✅ Registered with server successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:45,467 - __main__ - INFO - Round 0 finished. Loss: 1.7635, Acc: 37.44%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:48:45] "POST /submit_update HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:45+00:00] [0c8fdc3a7937] Set delay=200ms, loss=1% on vethdf315f5
+[36mdocker-tc     |[0m [2026-01-20T19:48:45+00:00] [0c8fdc3a7937] Set bandwidth-limit=5mbps on vethdf315f5
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:45,603 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:45,603 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[36mdocker-tc     |[0m [2026-01-20T19:48:45+00:00] [0c8fdc3a7937] Controlling traffic of the container /fl-rest_client_015_1 on vethdf315f5
+[35;1mclient_018_1  |[0m 2026-01-20 19:48:45,683 - __main__ - INFO - --- New Round Detected: 0 ---
+[35mclient_003_1  |[0m 2026-01-20 19:48:45,707 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:45,856 - __main__ - INFO - Round 0 finished. Loss: 1.6887, Acc: 31.61%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:48:45] "POST /submit_update HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.16 - - [20/Jan/2026 19:48:45] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:45,863 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:45,863 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[35mclient_013_1  |[0m 2026-01-20 19:48:46,039 - __main__ - INFO - --- New Round Detected: 0 ---
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [c4e410ff46b0] Set delay=200ms, loss=1% on veth35c1639
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [c4e410ff46b0] Set bandwidth-limit=5mbps on veth35c1639
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [c4e410ff46b0] Controlling traffic of the container /fl-rest_client_019_1 on veth35c1639
+[36mclient_020_1  |[0m 2026-01-20 19:48:46,222 - __main__ - INFO - --- New Round Detected: 0 ---
+[33;1mclient_016_1  |[0m 2026-01-20 19:48:46,231 - __main__ - INFO - --- New Round Detected: 0 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.14 - - [20/Jan/2026 19:48:46] "GET /download_model?round=0 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:48:46,425 - __main__ - INFO - Round 0 finished. Loss: 1.0023, Acc: 72.46%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.3 - - [20/Jan/2026 19:48:46] "GET /download_model?round=0 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [f5171f7cb3fe] Set delay=200ms, loss=1% on veth2258393
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [f5171f7cb3fe] Set bandwidth-limit=5mbps on veth2258393
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.9 - - [20/Jan/2026 19:48:46] "GET /download_model?round=0 HTTP/1.1" 200 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:46+00:00] [f5171f7cb3fe] Controlling traffic of the container /fl-rest_client_014_1 on veth2258393
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [10e695ebae60] Set delay=20ms on vethcd740aa
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [10e695ebae60] Set bandwidth-limit=1gbit on vethcd740aa
+[34mclient_004_1  |[0m 2026-01-20 19:48:47,277 - __main__ - INFO - Round 0 finished. Loss: 1.1868, Acc: 58.77%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:48:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:48:47,342 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34mclient_004_1  |[0m 
+[34mclient_004_1  |[0m 2026-01-20 19:48:47,342 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [10e695ebae60] Controlling traffic of the container /fl-rest_client_004_1 on vethcd740aa
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:47,433 - __main__ - INFO - Round 0 finished. Loss: 1.2574, Acc: 60.80%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:48:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:47,520 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:47,520 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:48:47,774 - __main__ - INFO - Round 0 finished. Loss: 1.8640, Acc: 33.18%
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [781d94317a5d] Set delay=20ms on veth359f2a3
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [781d94317a5d] Set bandwidth-limit=1gbit on veth359f2a3
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:48:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mdocker-tc     |[0m [2026-01-20T19:48:47+00:00] [781d94317a5d] Controlling traffic of the container /fl-rest_client_006_1 on veth359f2a3
+[36mclient_010_1  |[0m 2026-01-20 19:48:47,837 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:48:47,837 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:48:47,936 - __main__ - INFO - Round 0 finished. Loss: 1.7039, Acc: 43.26%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:48:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:48:48,011 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:48:48,011 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[36mdocker-tc     |[0m [2026-01-20T19:48:48+00:00] [63f93389d81c] Set delay=20ms on vethcb6e61f
+[36mdocker-tc     |[0m [2026-01-20T19:48:48+00:00] [63f93389d81c] Set bandwidth-limit=1gbit on vethcb6e61f
+[36mdocker-tc     |[0m [2026-01-20T19:48:48+00:00] [63f93389d81c] Controlling traffic of the container /fl-rest_client_002_1 on vethcb6e61f
+[33mserver_1      |[0m INFO:__main__:--- Round 0 Acc: 15.59%, Loss: 2.3524 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 1. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:48:48] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:48:48,701 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:48:48,701 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:48:50,993 - __main__ - INFO - Round 0 finished. Loss: 1.3425, Acc: 53.37%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:48:51] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:48:51,128 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:48:51,128 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:55,140 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:48:55] "GET /download_model?round=1 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:55,229 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:48:55] "GET /download_model?round=1 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:55,673 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:48:55] "GET /download_model?round=1 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:55,925 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:48:55] "GET /download_model?round=1 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:56,084 - __main__ - INFO - Round 1 finished. Loss: 1.6234, Acc: 39.14%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:48:56] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:56,219 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:48:56,219 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:56,315 - __main__ - INFO - Round 1 finished. Loss: 1.4522, Acc: 54.25%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:48:56] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:56,451 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:48:56,451 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:56,872 - __main__ - INFO - Round 1 finished. Loss: 1.1366, Acc: 58.08%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:48:56] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:57,007 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:48:57,007 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:48:57,405 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:48:57] "GET /download_model?round=1 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:48:57,457 - __main__ - INFO - Round 1 finished. Loss: 1.4128, Acc: 46.97%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:57,591 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:48:57] "GET /download_model?round=1 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:48:57,972 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:48:58] "GET /download_model?round=1 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:48:58,190 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:48:58] "GET /download_model?round=1 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:58,300 - __main__ - INFO - Round 1 finished. Loss: 1.2105, Acc: 60.80%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:48:58] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:58,363 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:48:58,363 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[32mclient_002_1  |[0m 2026-01-20 19:48:58,882 - __main__ - INFO - --- New Round Detected: 1 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:48:58] "GET /download_model?round=1 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:48:59,020 - __main__ - INFO - Round 1 finished. Loss: 1.5469, Acc: 47.92%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:48:59] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:48:59,086 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:48:59,087 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:48:59,424 - __main__ - INFO - Round 1 finished. Loss: 1.5086, Acc: 45.96%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:48:59] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:48:59,504 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:48:59,504 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 1 Acc: 22.03%, Loss: 2.2047 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 2. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:00] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:00,076 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:00,076 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:00,545 - __main__ - INFO - Round 1 finished. Loss: 0.9639, Acc: 66.12%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:00] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:00,679 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:49:00,680 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:49:01,190 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:01] "GET /download_model?round=2 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:01,713 - __main__ - INFO - Round 1 finished. Loss: 0.9022, Acc: 74.02%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:01] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:01,871 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:49:01,871 - __main__ - INFO - Update submitted for Round 1. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:49:05,374 - __main__ - INFO - Round 2 finished. Loss: 1.0795, Acc: 63.84%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:05] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:05,510 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:49:05,510 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:06,320 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:06] "GET /download_model?round=2 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:06,512 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:06] "GET /download_model?round=2 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:07,074 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:07] "GET /download_model?round=2 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:07,161 - __main__ - INFO - Round 2 finished. Loss: 1.5086, Acc: 43.23%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:07] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:07,297 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:07,297 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:07,563 - __main__ - INFO - Round 2 finished. Loss: 1.3238, Acc: 57.45%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:08,476 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:08] "GET /download_model?round=2 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:08,716 - __main__ - INFO - Round 2 finished. Loss: 1.0778, Acc: 62.25%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:08] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:08,781 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32;1mclient_007_1  |[0m 
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:08,781 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:08,917 - __main__ - INFO - Round 2 finished. Loss: 1.1546, Acc: 62.10%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:08] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:08,998 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:08,998 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:49:09,191 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:09] "GET /download_model?round=2 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:09,566 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:09] "GET /download_model?round=2 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:09,964 - __main__ - INFO - Round 2 finished. Loss: 1.4539, Acc: 50.16%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:09] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:10,028 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:49:10,028 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:10,140 - __main__ - INFO - --- New Round Detected: 2 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:10] "GET /download_model?round=2 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 2 Acc: 21.99%, Loss: 1.9036 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 3. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:10] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:10,246 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:10,246 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:10,746 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:10] "GET /download_model?round=3 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:11,059 - __main__ - INFO - Round 2 finished. Loss: 1.2440, Acc: 53.96%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:11] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:11,213 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:11,213 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:49:11,748 - __main__ - INFO - Round 2 finished. Loss: 1.2941, Acc: 55.16%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:11] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:11,884 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:49:11,884 - __main__ - INFO - Update submitted for Round 2. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:11,934 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:11] "GET /download_model?round=3 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:13,557 - __main__ - INFO - Round 3 finished. Loss: 0.7004, Acc: 78.32%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:13] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:13,690 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:49:13,691 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:14,016 - __main__ - INFO - Round 3 finished. Loss: 0.8012, Acc: 72.47%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:14] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:14,150 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:49:14,150 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:49:15,573 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:15] "GET /download_model?round=3 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:17,360 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:17] "GET /download_model?round=3 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:18,173 - __main__ - INFO - Round 3 finished. Loss: 1.3534, Acc: 50.17%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:18,849 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:18] "GET /download_model?round=3 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:19,074 - __main__ - INFO - --- New Round Detected: 3 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:19] "GET /download_model?round=3 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:19,584 - __main__ - INFO - Round 3 finished. Loss: 0.9548, Acc: 68.44%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:19] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:19,651 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35mclient_003_1  |[0m 
+[35mclient_003_1  |[0m 2026-01-20 19:49:19,651 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 3 Acc: 34.35%, Loss: 1.6979 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 4. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:19] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:19,674 - __main__ - INFO - Round 3 finished. Loss: 0.9211, Acc: 67.69%
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:19,682 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:19,683 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:19] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:19,809 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:19,809 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:19,912 - __main__ - INFO - Round 3 finished. Loss: 0.9919, Acc: 64.09%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:20] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:20,059 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:20,060 - __main__ - INFO - Update submitted for Round 3. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:49:20,092 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:20] "GET /download_model?round=4 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:20,310 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:20] "GET /download_model?round=4 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:21,281 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:21] "GET /download_model?round=4 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:21,308 - __main__ - INFO - Round 4 finished. Loss: 1.1025, Acc: 63.54%
+[36mclient_010_1  |[0m 2026-01-20 19:49:21,394 - __main__ - INFO - Round 4 finished. Loss: 1.2461, Acc: 56.76%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:21] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:21,444 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:21,444 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:21] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:21,548 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:49:21,549 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:49:21,947 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:21] "GET /download_model?round=4 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:22,168 - __main__ - INFO - Round 4 finished. Loss: 1.1057, Acc: 60.43%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[32mclient_002_1  |[0m 2026-01-20 19:49:23,769 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:23] "GET /download_model?round=4 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:24,155 - __main__ - INFO - Round 4 finished. Loss: 1.0628, Acc: 63.60%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:24] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:24,211 - __main__ - INFO - --- New Round Detected: 4 ---
+[33mclient_001_1  |[0m 2026-01-20 19:49:24,219 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:49:24,220 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:24] "GET /download_model?round=4 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 4 Acc: 33.42%, Loss: 1.7519 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 5. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:24] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:24,408 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:24,408 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:25,448 - __main__ - INFO - Round 4 finished. Loss: 0.6052, Acc: 80.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:25] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:25,582 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:49:25,585 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:27,290 - __main__ - INFO - Round 4 finished. Loss: 0.7023, Acc: 75.46%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:27] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:27,426 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:49:27,426 - __main__ - INFO - Update submitted for Round 4. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:49:29,713 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:29] "GET /download_model?round=5 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:29,772 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:29] "GET /download_model?round=5 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:29,872 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:29] "GET /download_model?round=5 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:30,122 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:30] "GET /download_model?round=5 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:30,350 - __main__ - INFO - Round 5 finished. Loss: 1.2730, Acc: 51.55%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:30] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:30,484 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:30,484 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:30,548 - __main__ - INFO - Round 5 finished. Loss: 0.7778, Acc: 72.66%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:30] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:30,708 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:30,708 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:31,499 - __main__ - INFO - Round 5 finished. Loss: 0.9104, Acc: 68.21%
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:31,513 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:31] "GET /download_model?round=5 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36mclient_010_1  |[0m 2026-01-20 19:49:31,610 - __main__ - INFO - --- New Round Detected: 5 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:31] "GET /download_model?round=5 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:32,552 - __main__ - INFO - Round 5 finished. Loss: 1.0344, Acc: 66.17%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:32] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:32,620 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34;1mclient_009_1  |[0m 
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:32,620 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36mclient_010_1  |[0m 2026-01-20 19:49:32,747 - __main__ - INFO - Round 5 finished. Loss: 1.2309, Acc: 56.76%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:32] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:32,926 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:49:32,926 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:49:33,494 - __main__ - INFO - Round 5 finished. Loss: 0.9296, Acc: 69.38%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:33] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:33,559 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35mclient_003_1  |[0m 
+[35mclient_003_1  |[0m 2026-01-20 19:49:33,559 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 5 Acc: 35.51%, Loss: 1.7286 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 6. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:34] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:34,123 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:34,124 - __main__ - INFO - Update submitted for Round 5. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:49:34,282 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:34] "GET /download_model?round=6 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:34,484 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:34] "GET /download_model?round=6 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:35,422 - __main__ - INFO - Round 6 finished. Loss: 1.0544, Acc: 61.96%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:35] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:35,573 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:35,573 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:35,646 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:35] "GET /download_model?round=6 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:36,430 - __main__ - INFO - Round 6 finished. Loss: 0.9995, Acc: 65.18%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:36] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:36,568 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:49:36,569 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:37,303 - __main__ - INFO - Round 6 finished. Loss: 0.5155, Acc: 84.34%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:37] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:37,458 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:49:37,458 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:37,506 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:37] "GET /download_model?round=6 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:40,546 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:40] "GET /download_model?round=6 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:40,648 - __main__ - INFO - Round 6 finished. Loss: 0.5667, Acc: 80.82%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:40] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:40,769 - __main__ - INFO - --- New Round Detected: 6 ---
+[34mclient_004_1  |[0m 2026-01-20 19:49:40,784 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:49:40,784 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:40] "GET /download_model?round=6 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:41,381 - __main__ - INFO - Round 6 finished. Loss: 1.2210, Acc: 55.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:41,489 - __main__ - INFO - Round 6 finished. Loss: 0.7424, Acc: 73.58%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:41] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:41,553 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:41,553 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:42,700 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:42] "GET /download_model?round=6 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:42,991 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:43] "GET /download_model?round=6 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:43,627 - __main__ - INFO - --- New Round Detected: 6 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:43] "GET /download_model?round=6 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 6 Acc: 41.60%, Loss: 1.5809 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 7. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:43] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:43,728 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:43,728 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:43,730 - __main__ - INFO - Round 6 finished. Loss: 1.0380, Acc: 67.30%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:43] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:43,885 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:43,885 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:44,199 - __main__ - INFO - --- New Round Detected: 7 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:44] "GET /download_model?round=7 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:44,369 - __main__ - INFO - Round 6 finished. Loss: 1.1952, Acc: 57.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:44] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:44,510 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:49:44,510 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:45,161 - __main__ - INFO - Round 7 finished. Loss: 0.8770, Acc: 69.43%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:45] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:45,322 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:45,322 - __main__ - INFO - Update submitted for Round 7. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:45,681 - __main__ - INFO - --- New Round Detected: 7 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:45] "GET /download_model?round=7 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:46,636 - __main__ - INFO - --- New Round Detected: 7 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:46] "GET /download_model?round=7 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:47,295 - __main__ - INFO - Round 7 finished. Loss: 0.9924, Acc: 64.15%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:47] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:47,449 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:47,450 - __main__ - INFO - Update submitted for Round 7. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:47,522 - __main__ - INFO - --- New Round Detected: 7 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:47] "GET /download_model?round=7 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:47,863 - __main__ - INFO - Round 6 finished. Loss: 0.8941, Acc: 71.24%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mclient_001_1  |[0m 2026-01-20 19:49:48,709 - __main__ - INFO - Round 7 finished. Loss: 0.8737, Acc: 69.75%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:48] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:49:48,773 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:49:48,773 - __main__ - INFO - Update submitted for Round 7. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 7 Acc: 42.84%, Loss: 1.5626 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 8. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:49:49] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:49:49,985 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:49:49,985 - __main__ - INFO - Update submitted for Round 6. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:49:50,416 - __main__ - INFO - Round 7 finished. Loss: 0.4249, Acc: 87.33%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:49:50] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:49:50,551 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:49:50,551 - __main__ - INFO - Update submitted for Round 7. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:49:50,858 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:50] "GET /download_model?round=8 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:51,620 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:51] "GET /download_model?round=8 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:52,342 - __main__ - INFO - Round 8 finished. Loss: 0.7046, Acc: 74.58%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:49:52] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:52,482 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:49:52,482 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:53,801 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:53] "GET /download_model?round=8 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:53,948 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:53] "GET /download_model?round=8 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:54,027 - __main__ - INFO - Round 8 finished. Loss: 0.5092, Acc: 82.12%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:49:54] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:49:54,281 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:49:54,281 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:49:54,575 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:54] "GET /download_model?round=8 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:54,730 - __main__ - INFO - Round 8 finished. Loss: 1.1182, Acc: 59.27%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:49:54] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:54,884 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:49:54,884 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:55,023 - __main__ - INFO - Round 8 finished. Loss: 0.9652, Acc: 68.28%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:55,451 - __main__ - INFO - --- New Round Detected: 8 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:55] "GET /download_model?round=8 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:55,865 - __main__ - INFO - Round 8 finished. Loss: 1.1086, Acc: 60.50%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:49:55] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:49:55,931 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:49:55,931 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:56,553 - __main__ - INFO - Round 8 finished. Loss: 0.8040, Acc: 72.62%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:49:56] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:56,623 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32;1mclient_007_1  |[0m 
+[32;1mclient_007_1  |[0m 2026-01-20 19:49:56,623 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 8 Acc: 44.23%, Loss: 1.5421 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 9. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:49:57] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:57,104 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:49:57,104 - __main__ - INFO - Update submitted for Round 8. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:57,535 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:57] "GET /download_model?round=9 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:58,429 - __main__ - INFO - Round 9 finished. Loss: 0.9399, Acc: 66.93%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:49:58] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:58,564 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:49:58,564 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:49:58,840 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:49:58] "GET /download_model?round=9 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:00,050 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:00] "GET /download_model?round=9 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:00,614 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:00] "GET /download_model?round=9 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:00,846 - __main__ - INFO - Round 9 finished. Loss: 0.7993, Acc: 72.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:00] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:01,000 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:50:01,001 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:02,545 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:02] "GET /download_model?round=9 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:03,040 - __main__ - INFO - Round 9 finished. Loss: 0.3156, Acc: 90.57%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:03] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:03,194 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:50:03,194 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:03,292 - __main__ - INFO - Round 9 finished. Loss: 0.6200, Acc: 77.18%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:03] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:03,427 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:03,427 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:50:04,162 - __main__ - INFO - Round 9 finished. Loss: 0.7242, Acc: 76.30%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[34mclient_004_1  |[0m 2026-01-20 19:50:04,395 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:04] "GET /download_model?round=9 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:04,947 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:04] "GET /download_model?round=9 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:05,774 - __main__ - INFO - Round 9 finished. Loss: 1.0653, Acc: 62.38%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:05] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:05,856 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35;1mclient_008_1  |[0m 
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:05,856 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:50:06,004 - __main__ - INFO - --- New Round Detected: 9 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:06] "GET /download_model?round=9 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 9 Acc: 48.30%, Loss: 1.4213 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 10. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:06] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:06,654 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:50:06,654 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:06,684 - __main__ - INFO - --- New Round Detected: 10 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:06] "GET /download_model?round=10 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:07,181 - __main__ - INFO - --- New Round Detected: 10 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:07] "GET /download_model?round=10 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:07,336 - __main__ - INFO - Round 9 finished. Loss: 1.0934, Acc: 61.40%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:07] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:07,493 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:50:07,493 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:50:07,613 - __main__ - INFO - Round 9 finished. Loss: 0.3570, Acc: 88.40%
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:07,624 - __main__ - INFO - Round 10 finished. Loss: 0.7888, Acc: 73.15%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:07] "POST /submit_update HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:07] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:07,760 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:07,760 - __main__ - INFO - Update submitted for Round 10. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:50:07,763 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:50:07,765 - __main__ - INFO - Update submitted for Round 9. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:07,832 - __main__ - INFO - Round 10 finished. Loss: 0.8576, Acc: 72.31%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:07] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:07,974 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:07,974 - __main__ - INFO - Update submitted for Round 10. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:08,678 - __main__ - INFO - --- New Round Detected: 10 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:08] "GET /download_model?round=10 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:10,191 - __main__ - INFO - Round 10 finished. Loss: 0.8635, Acc: 69.39%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mclient_001_1  |[0m 2026-01-20 19:50:11,067 - __main__ - INFO - --- New Round Detected: 10 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:11] "GET /download_model?round=10 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 10 Acc: 45.86%, Loss: 1.5244 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 11. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:12] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:12,106 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:12,106 - __main__ - INFO - Update submitted for Round 10. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:50:12,654 - __main__ - INFO - Round 10 finished. Loss: 0.5467, Acc: 83.18%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:12] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:12,789 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:50:12,789 - __main__ - INFO - Update submitted for Round 10. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:50:13,256 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:13] "GET /download_model?round=11 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:13,489 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:13] "GET /download_model?round=11 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:14,265 - __main__ - INFO - Round 11 finished. Loss: 0.6228, Acc: 78.18%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:14] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:14,399 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:14,400 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:50:14,963 - __main__ - INFO - Round 11 finished. Loss: 0.2606, Acc: 92.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:15] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:15,099 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:50:15,100 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:15,940 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:15] "GET /download_model?round=11 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:16,716 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:16] "GET /download_model?round=11 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:16,765 - __main__ - INFO - Round 11 finished. Loss: 0.9982, Acc: 64.36%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:16] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:16,900 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:16,900 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:50:17,560 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:17] "GET /download_model?round=11 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:17,823 - __main__ - INFO - --- New Round Detected: 11 ---
+[34mclient_004_1  |[0m 2026-01-20 19:50:17,829 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:17] "GET /download_model?round=11 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:17] "GET /download_model?round=11 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:18,049 - __main__ - INFO - --- New Round Detected: 11 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:18] "GET /download_model?round=11 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:18,743 - __main__ - INFO - Round 11 finished. Loss: 0.7758, Acc: 74.57%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36mclient_010_1  |[0m 2026-01-20 19:50:18,945 - __main__ - INFO - Round 11 finished. Loss: 1.0165, Acc: 63.99%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:18] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:18,994 - __main__ - INFO - Round 11 finished. Loss: 0.7451, Acc: 74.67%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:19] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:19,030 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:50:19,031 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:19,064 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32;1mclient_007_1  |[0m 
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:19,064 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 11 Acc: 47.05%, Loss: 1.5006 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 12. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:20] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:20,975 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:20,976 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:50:21,076 - __main__ - INFO - Round 11 finished. Loss: 0.5954, Acc: 80.76%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:21] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:21,211 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:50:21,211 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:50:21,336 - __main__ - INFO - Round 11 finished. Loss: 0.2924, Acc: 90.77%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:21] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:50:21,471 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:50:21,471 - __main__ - INFO - Update submitted for Round 11. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:22,171 - __main__ - INFO - --- New Round Detected: 12 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:22] "GET /download_model?round=12 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:22,873 - __main__ - INFO - --- New Round Detected: 12 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:22] "GET /download_model?round=12 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:23,672 - __main__ - INFO - Round 12 finished. Loss: 0.8288, Acc: 70.25%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:23] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:23,809 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:23,809 - __main__ - INFO - Update submitted for Round 12. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:24,467 - __main__ - INFO - --- New Round Detected: 12 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:24] "GET /download_model?round=12 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:24,983 - __main__ - INFO - Round 12 finished. Loss: 0.3682, Acc: 89.57%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:25] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:25,138 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:50:25,138 - __main__ - INFO - Update submitted for Round 12. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:50:25,165 - __main__ - INFO - --- New Round Detected: 12 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:25] "GET /download_model?round=12 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:25,199 - __main__ - INFO - Round 12 finished. Loss: 0.5271, Acc: 81.78%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:26,967 - __main__ - INFO - --- New Round Detected: 12 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:26] "GET /download_model?round=12 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 12 Acc: 48.40%, Loss: 1.5828 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 13. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:27] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:27,238 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:27,239 - __main__ - INFO - Update submitted for Round 12. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:27,524 - __main__ - INFO - Round 12 finished. Loss: 0.9229, Acc: 66.60%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:27] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:27,657 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:27,657 - __main__ - INFO - Update submitted for Round 12. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:50:28,028 - __main__ - INFO - Round 12 finished. Loss: 0.1960, Acc: 94.69%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:28] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:28,165 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:50:28,165 - __main__ - INFO - Update submitted for Round 12. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:50:29,113 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:29] "GET /download_model?round=13 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:29,133 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:29] "GET /download_model?round=13 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:30,383 - __main__ - INFO - Round 13 finished. Loss: 1.0020, Acc: 65.72%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:30] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:30,517 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:50:30,517 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:30,768 - __main__ - INFO - Round 13 finished. Loss: 0.6952, Acc: 76.25%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:30] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:30,902 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:30,903 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:31,037 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:31] "GET /download_model?round=13 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:31,274 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:31] "GET /download_model?round=13 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:50:31,534 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:31] "GET /download_model?round=13 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:32,208 - __main__ - INFO - Round 13 finished. Loss: 0.7412, Acc: 75.76%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:33,872 - __main__ - INFO - --- New Round Detected: 13 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:33] "GET /download_model?round=13 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 13 Acc: 45.83%, Loss: 1.5967 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 14. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:34] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:34,305 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:34,305 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:50:34,581 - __main__ - INFO - Round 13 finished. Loss: 0.1629, Acc: 96.06%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:34] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:50:34,718 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:50:34,718 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:50:35,204 - __main__ - INFO - --- New Round Detected: 14 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:35] "GET /download_model?round=14 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:35,459 - __main__ - INFO - Round 13 finished. Loss: 0.7425, Acc: 73.93%
+[35mclient_003_1  |[0m 2026-01-20 19:50:35,468 - __main__ - INFO - Round 13 finished. Loss: 0.3456, Acc: 89.82%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:35] "POST /submit_update HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:35] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:35,607 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:50:35,607 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:35,614 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:35,614 - __main__ - INFO - Update submitted for Round 13. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:37,303 - __main__ - INFO - --- New Round Detected: 14 ---
+[33mclient_001_1  |[0m 2026-01-20 19:50:37,322 - __main__ - INFO - Round 14 finished. Loss: 0.3820, Acc: 88.57%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:37] "GET /download_model?round=14 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:37] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:37,456 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:50:37,456 - __main__ - INFO - Update submitted for Round 14. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:37,724 - __main__ - INFO - --- New Round Detected: 14 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:37] "GET /download_model?round=14 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:38,026 - __main__ - INFO - Round 14 finished. Loss: 0.5153, Acc: 82.70%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32mclient_002_1  |[0m 2026-01-20 19:50:38,235 - __main__ - INFO - --- New Round Detected: 14 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:38] "GET /download_model?round=14 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:38,406 - __main__ - INFO - Round 14 finished. Loss: 0.8388, Acc: 70.69%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:38] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:38,564 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35;1mclient_008_1  |[0m 
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:38,564 - __main__ - INFO - Update submitted for Round 14. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 14 Acc: 49.42%, Loss: 1.6027 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 15. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:40] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:40,054 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:40,054 - __main__ - INFO - Update submitted for Round 14. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:50:40,581 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:40] "GET /download_model?round=15 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:40,966 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:41] "GET /download_model?round=15 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:41,255 - __main__ - INFO - Round 14 finished. Loss: 0.1042, Acc: 98.15%
+[36mclient_010_1  |[0m 2026-01-20 19:50:41,293 - __main__ - INFO - Round 15 finished. Loss: 0.9567, Acc: 67.30%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:41] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:41,391 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:50:41,391 - __main__ - INFO - Update submitted for Round 14. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:41] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:41,429 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:50:41,429 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:42,052 - __main__ - INFO - Round 15 finished. Loss: 0.6811, Acc: 77.71%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:42] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:42,205 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:42,205 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:44,366 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:44] "GET /download_model?round=15 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:50:44,781 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:44] "GET /download_model?round=15 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:45,384 - __main__ - INFO - Round 15 finished. Loss: 0.7155, Acc: 75.76%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:45] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:45,520 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:45,520 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:50:45,669 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:45] "GET /download_model?round=15 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:45,726 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:45] "GET /download_model?round=15 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:46,823 - __main__ - INFO - Round 15 finished. Loss: 0.6528, Acc: 76.02%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mclient_001_1  |[0m 2026-01-20 19:50:47,546 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:47] "GET /download_model?round=15 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[34mclient_004_1  |[0m 2026-01-20 19:50:48,118 - __main__ - INFO - Round 15 finished. Loss: 0.0793, Acc: 99.08%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:48] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:50:48,225 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34mclient_004_1  |[0m 
+[34mclient_004_1  |[0m 2026-01-20 19:50:48,226 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:48,627 - __main__ - INFO - --- New Round Detected: 15 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:48] "GET /download_model?round=15 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:48,659 - __main__ - INFO - Round 15 finished. Loss: 0.2128, Acc: 94.78%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:48] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:48,724 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:50:48,724 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 15 Acc: 49.38%, Loss: 1.5369 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 16. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:49] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:49,173 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:49,173 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:49,550 - __main__ - INFO - Round 15 finished. Loss: 0.8714, Acc: 70.36%
+[35mclient_003_1  |[0m 2026-01-20 19:50:49,645 - __main__ - INFO - Round 15 finished. Loss: 0.2013, Acc: 95.05%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:49] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:49,686 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:49,686 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:49] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:49,800 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:50:49,800 - __main__ - INFO - Update submitted for Round 15. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:50,117 - __main__ - INFO - --- New Round Detected: 16 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:50] "GET /download_model?round=16 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:50,837 - __main__ - INFO - Round 16 finished. Loss: 0.4662, Acc: 84.53%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:50:50] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:50,993 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:50:50,995 - __main__ - INFO - Update submitted for Round 16. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:50:51,456 - __main__ - INFO - --- New Round Detected: 16 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:51] "GET /download_model?round=16 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:51,490 - __main__ - INFO - --- New Round Detected: 16 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:51] "GET /download_model?round=16 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:52,198 - __main__ - INFO - Round 16 finished. Loss: 0.8202, Acc: 72.76%
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:52,266 - __main__ - INFO - --- New Round Detected: 16 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:52] "GET /download_model?round=16 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:50:52] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:50:52,331 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:50:52,331 - __main__ - INFO - Update submitted for Round 16. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:53,465 - __main__ - INFO - Round 16 finished. Loss: 0.5866, Acc: 80.33%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32mclient_002_1  |[0m 2026-01-20 19:50:53,882 - __main__ - INFO - Round 16 finished. Loss: 0.0787, Acc: 99.12%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:50:53] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32mclient_002_1  |[0m 2026-01-20 19:50:53,957 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32mclient_002_1  |[0m 
+[32mclient_002_1  |[0m 2026-01-20 19:50:53,957 - __main__ - INFO - Update submitted for Round 16. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 16 Acc: 48.65%, Loss: 1.6847 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 17. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:50:55] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:55,446 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:50:55,446 - __main__ - INFO - Update submitted for Round 16. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:55,582 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:55] "GET /download_model?round=17 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:56,666 - __main__ - INFO - Round 17 finished. Loss: 0.6851, Acc: 78.08%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:50:56] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:56,804 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:50:56,804 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:50:58,290 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:50:58] "GET /download_model?round=17 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:50:58,785 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:50:58] "GET /download_model?round=17 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:50:59,243 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:50:59] "GET /download_model?round=17 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:50:59,749 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:50:59] "GET /download_model?round=17 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:50:59,901 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:50:59] "GET /download_model?round=17 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:00,095 - __main__ - INFO - Round 17 finished. Loss: 0.1032, Acc: 98.28%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:00] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:00,214 - __main__ - INFO - Round 17 finished. Loss: 0.6354, Acc: 78.14%
+[34mclient_004_1  |[0m 2026-01-20 19:51:00,232 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:51:00,232 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:00] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:00,347 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:00,348 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:00,637 - __main__ - INFO - Round 17 finished. Loss: 0.7502, Acc: 75.51%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:00] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:00,771 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:00,771 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:51:00,860 - __main__ - INFO - Round 17 finished. Loss: 0.1716, Acc: 96.72%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:01,095 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:01] "GET /download_model?round=17 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:01,824 - __main__ - INFO - Round 17 finished. Loss: 0.4753, Acc: 83.23%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:01] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:01,891 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:01,891 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36mclient_010_1  |[0m 2026-01-20 19:51:02,441 - __main__ - INFO - --- New Round Detected: 17 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:02] "GET /download_model?round=17 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:03,190 - __main__ - INFO - Round 17 finished. Loss: 0.7413, Acc: 74.72%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:03] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:03,261 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:51:03,261 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 17 Acc: 49.31%, Loss: 1.6540 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 18. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:03] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:03,618 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:03,620 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:51:04,082 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:04] "GET /download_model?round=18 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:04,157 - __main__ - INFO - Round 17 finished. Loss: 0.1180, Acc: 97.91%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:04] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:04,294 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:51:04,294 - __main__ - INFO - Update submitted for Round 17. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:51:05,494 - __main__ - INFO - Round 18 finished. Loss: 0.1251, Acc: 97.14%
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:05,567 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:05] "GET /download_model?round=18 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:05] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:05,647 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:51:05,647 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:06,619 - __main__ - INFO - Round 18 finished. Loss: 0.5329, Acc: 82.09%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:06] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:06,774 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:06,774 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:06,865 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:06] "GET /download_model?round=18 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:07,458 - __main__ - INFO - Round 18 finished. Loss: 0.5762, Acc: 81.90%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:07] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:07,592 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:07,592 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:51:10,293 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:10] "GET /download_model?round=18 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:10,409 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:10] "GET /download_model?round=18 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:10,838 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:10] "GET /download_model?round=18 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:11,427 - __main__ - INFO - Round 18 finished. Loss: 0.7387, Acc: 75.71%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:11,803 - __main__ - INFO - Round 18 finished. Loss: 0.5393, Acc: 81.33%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:11] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:11,867 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33;1mclient_006_1  |[0m 
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:11,867 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:11,971 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:12] "GET /download_model?round=18 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:12,540 - __main__ - INFO - Round 18 finished. Loss: 0.4643, Acc: 84.92%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:12] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:12,605 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:12,605 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:51:12,902 - __main__ - INFO - Round 18 finished. Loss: 0.0628, Acc: 99.12%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:12] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:12,974 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34mclient_004_1  |[0m 
+[34mclient_004_1  |[0m 2026-01-20 19:51:12,976 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:51:13,333 - __main__ - INFO - --- New Round Detected: 18 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:13] "GET /download_model?round=18 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 18 Acc: 48.87%, Loss: 1.7752 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 19. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:13] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:13,700 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:13,707 - __main__ - INFO - --- New Round Detected: 19 ---
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:13,701 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:13] "GET /download_model?round=19 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:14,065 - __main__ - INFO - Round 18 finished. Loss: 0.8126, Acc: 72.76%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:14] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:14,218 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:51:14,218 - __main__ - INFO - Update submitted for Round 18. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:51:14,362 - __main__ - INFO - --- New Round Detected: 19 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:14] "GET /download_model?round=19 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:15,712 - __main__ - INFO - --- New Round Detected: 19 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:15] "GET /download_model?round=19 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:15,907 - __main__ - INFO - Round 19 finished. Loss: 0.1453, Acc: 97.36%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:16] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:16,042 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:16,042 - __main__ - INFO - Update submitted for Round 19. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:16,836 - __main__ - INFO - --- New Round Detected: 19 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:16] "GET /download_model?round=19 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:17,399 - __main__ - INFO - Round 19 finished. Loss: 0.1291, Acc: 97.23%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:17] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:17,557 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:51:17,557 - __main__ - INFO - Update submitted for Round 19. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:17,655 - __main__ - INFO - --- New Round Detected: 19 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:17] "GET /download_model?round=19 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:18,093 - __main__ - INFO - Round 19 finished. Loss: 0.0549, Acc: 99.37%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:18] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:18,232 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:51:18,232 - __main__ - INFO - Update submitted for Round 19. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:18,302 - __main__ - INFO - Round 19 finished. Loss: 0.5049, Acc: 82.57%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:18,637 - __main__ - INFO - Round 19 finished. Loss: 0.5697, Acc: 81.23%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:18] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:18,702 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34;1mclient_009_1  |[0m 
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:18,702 - __main__ - INFO - Update submitted for Round 19. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 19 Acc: 50.14%, Loss: 1.7865 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 20. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:19] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:20,008 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:20,008 - __main__ - INFO - Update submitted for Round 19. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:21,929 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:21] "GET /download_model?round=20 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:22,679 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:22] "GET /download_model?round=20 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:23,073 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:23] "GET /download_model?round=20 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:23,360 - __main__ - INFO - Round 20 finished. Loss: 0.4414, Acc: 84.69%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:23] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:23,499 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:23,499 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:23,579 - __main__ - INFO - Round 20 finished. Loss: 0.5862, Acc: 79.34%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:23] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:23,715 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:23,715 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:23,764 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:23] "GET /download_model?round=20 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:24,298 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:24] "GET /download_model?round=20 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:24,577 - __main__ - INFO - Round 20 finished. Loss: 0.6628, Acc: 78.15%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:24] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:24,715 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:24,715 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:51:25,071 - __main__ - INFO - Round 20 finished. Loss: 0.6921, Acc: 76.77%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:25] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:25,204 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:51:25,204 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:51:25,930 - __main__ - INFO - Round 20 finished. Loss: 0.1332, Acc: 97.17%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mclient_001_1  |[0m 2026-01-20 19:51:26,105 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:26] "GET /download_model?round=20 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[35mclient_003_1  |[0m 2026-01-20 19:51:27,629 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:27] "GET /download_model?round=20 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:28,311 - __main__ - INFO - --- New Round Detected: 20 ---
+[33mserver_1      |[0m INFO:__main__:--- Round 20 Acc: 51.68%, Loss: 1.6041 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 21. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:28] "POST /submit_update HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:28] "GET /download_model?round=20 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:28,347 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:51:28,347 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:51:28,384 - __main__ - INFO - Round 20 finished. Loss: 0.0806, Acc: 99.30%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:28] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:28,527 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:28,527 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:28,772 - __main__ - INFO - --- New Round Detected: 21 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:28] "GET /download_model?round=21 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:29,881 - __main__ - INFO - Round 21 finished. Loss: 0.5909, Acc: 81.54%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:29] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:30,017 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:30,019 - __main__ - INFO - Update submitted for Round 21. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:30,077 - __main__ - INFO - --- New Round Detected: 21 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:30] "GET /download_model?round=21 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:31,188 - __main__ - INFO - Round 20 finished. Loss: 0.0374, Acc: 99.79%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:31] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:31,324 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:51:31,324 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:51:31,624 - __main__ - INFO - Round 20 finished. Loss: 0.0648, Acc: 99.29%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:31] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:31,775 - __main__ - INFO - Round 21 finished. Loss: 0.4176, Acc: 86.23%
+[35mclient_003_1  |[0m 2026-01-20 19:51:31,782 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:51:31,783 - __main__ - INFO - Update submitted for Round 20. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:33,562 - __main__ - INFO - --- New Round Detected: 21 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:33] "GET /download_model?round=21 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:33,781 - __main__ - INFO - --- New Round Detected: 21 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:33] "GET /download_model?round=21 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:33,981 - __main__ - INFO - Round 21 finished. Loss: 0.4038, Acc: 86.06%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:34] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:34,045 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36;1mclient_005_1  |[0m 
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:34,045 - __main__ - INFO - Update submitted for Round 21. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 21 Acc: 50.91%, Loss: 1.8861 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 22. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:34] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:34,084 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:34,084 - __main__ - INFO - Update submitted for Round 21. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:34,777 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:34] "GET /download_model?round=22 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:35,280 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:35] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:35,324 - __main__ - INFO - Round 21 finished. Loss: 0.4528, Acc: 84.08%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:35] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:35,459 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:35,459 - __main__ - INFO - Update submitted for Round 21. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:35,606 - __main__ - INFO - Round 22 finished. Loss: 0.6390, Acc: 79.14%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:35] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:35,740 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:35,740 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:51:36,054 - __main__ - INFO - Round 22 finished. Loss: 0.7007, Acc: 76.73%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:36] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:36,190 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:51:36,190 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:51:38,427 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:38] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:38,637 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:38] "GET /download_model?round=22 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:40,081 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:40] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:40,823 - __main__ - INFO - Round 22 finished. Loss: 0.0421, Acc: 99.94%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:41] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:41,033 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:41,033 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:41,211 - __main__ - INFO - Round 22 finished. Loss: 0.5441, Acc: 83.03%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32mclient_002_1  |[0m 2026-01-20 19:51:41,386 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:41] "GET /download_model?round=22 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:41,615 - __main__ - INFO - Round 22 finished. Loss: 0.0706, Acc: 99.08%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:41] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:41,679 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34mclient_004_1  |[0m 
+[34mclient_004_1  |[0m 2026-01-20 19:51:41,679 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:51:41,876 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:41] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:44,111 - __main__ - INFO - --- New Round Detected: 22 ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:44,147 - __main__ - INFO - --- New Round Detected: 22 ---
+[33mserver_1      |[0m INFO:__main__:--- Round 22 Acc: 50.89%, Loss: 1.6532 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 23. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:44] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:44] "GET /download_model?round=22 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:44] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:44,315 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:44,315 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:51:44,422 - __main__ - INFO - Round 22 finished. Loss: 0.0282, Acc: 99.79%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:44] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:44,556 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:51:44,557 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:51:44,622 - __main__ - INFO - Round 22 finished. Loss: 0.0248, Acc: 99.97%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:44] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:44,755 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:51:44,755 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:44,811 - __main__ - INFO - Round 22 finished. Loss: 0.4739, Acc: 84.99%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:44] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:44,946 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:44,946 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:45,571 - __main__ - INFO - --- New Round Detected: 23 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:45] "GET /download_model?round=23 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:45,821 - __main__ - INFO - --- New Round Detected: 23 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:45] "GET /download_model?round=23 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:45,859 - __main__ - INFO - Round 22 finished. Loss: 0.3517, Acc: 88.80%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:45] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:46,017 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:46,017 - __main__ - INFO - Update submitted for Round 22. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:51:46,266 - __main__ - INFO - --- New Round Detected: 23 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:46] "GET /download_model?round=23 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:46,752 - __main__ - INFO - Round 23 finished. Loss: 0.5538, Acc: 81.78%
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[36mclient_010_1  |[0m 2026-01-20 19:51:46,993 - __main__ - INFO - Round 23 finished. Loss: 0.5101, Acc: 83.77%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:47,062 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:51:47,062 - __main__ - INFO - Update submitted for Round 23. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:47,251 - __main__ - INFO - Round 23 finished. Loss: 0.4582, Acc: 84.34%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:47] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:47,314 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33;1mclient_006_1  |[0m 
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:47,314 - __main__ - INFO - Update submitted for Round 23. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 23 Acc: 49.58%, Loss: 2.0403 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 24. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:49] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:49,326 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:49,326 - __main__ - INFO - Update submitted for Round 23. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:51:51,108 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:51] "GET /download_model?round=24 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:51,758 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:51] "GET /download_model?round=24 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:53,303 - __main__ - INFO - Round 24 finished. Loss: 0.0479, Acc: 99.82%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:51:53] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:51:53,437 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:51:53,437 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:54,448 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:54] "GET /download_model?round=24 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:54,633 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:51:54] "GET /download_model?round=24 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:51:54,816 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:54] "GET /download_model?round=24 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:55,018 - __main__ - INFO - --- New Round Detected: 24 ---
+[34mclient_004_1  |[0m 2026-01-20 19:51:55,023 - __main__ - INFO - Round 24 finished. Loss: 0.0763, Acc: 98.74%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:55] "GET /download_model?round=24 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:51:55] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:51:55,178 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:51:55,179 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:55,403 - __main__ - INFO - Round 24 finished. Loss: 0.5731, Acc: 82.16%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:51:55] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:55,542 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:51:55,542 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:55,771 - __main__ - INFO - Round 24 finished. Loss: 0.3950, Acc: 87.21%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:51:55] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:55,907 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:51:55,907 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:56,080 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:56] "GET /download_model?round=24 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:57,132 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:57] "GET /download_model?round=24 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:57,377 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:57] "GET /download_model?round=24 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:51:57,408 - __main__ - INFO - Round 24 finished. Loss: 0.0174, Acc: 100.00%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:57,819 - __main__ - INFO - Round 24 finished. Loss: 0.2979, Acc: 90.55%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:51:57] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:57,887 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32;1mclient_007_1  |[0m 
+[32;1mclient_007_1  |[0m 2026-01-20 19:51:57,888 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:51:58,435 - __main__ - INFO - Round 24 finished. Loss: 0.1001, Acc: 97.80%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:51:58] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:58,497 - __main__ - INFO - Round 24 finished. Loss: 0.6804, Acc: 78.11%
+[35mclient_003_1  |[0m 2026-01-20 19:51:58,511 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35mclient_003_1  |[0m 
+[35mclient_003_1  |[0m 2026-01-20 19:51:58,512 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:51:58] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[36mclient_010_1  |[0m 2026-01-20 19:51:58,560 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[36mclient_010_1  |[0m 
+[36mclient_010_1  |[0m 2026-01-20 19:51:58,561 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:58,874 - __main__ - INFO - Round 24 finished. Loss: 0.5943, Acc: 79.14%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:51:58] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:58,940 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33;1mclient_006_1  |[0m 
+[33;1mclient_006_1  |[0m 2026-01-20 19:51:58,940 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:59,390 - __main__ - INFO - --- New Round Detected: 24 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:59] "GET /download_model?round=24 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:59,916 - __main__ - INFO - Round 24 finished. Loss: 0.6064, Acc: 80.40%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:51:59] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:59,979 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35;1mclient_008_1  |[0m 
+[35;1mclient_008_1  |[0m 2026-01-20 19:51:59,979 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 24 Acc: 50.37%, Loss: 1.8910 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 25. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:00] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:52:00,513 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:52:00,513 - __main__ - INFO - Update submitted for Round 24. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:52:03,500 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:03] "GET /download_model?round=25 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:05,242 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:05] "GET /download_model?round=25 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:05,605 - __main__ - INFO - Round 25 finished. Loss: 0.0436, Acc: 99.77%
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:05,633 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:05] "GET /download_model?round=25 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:05] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:05,748 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:52:05,748 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:05,982 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:06] "GET /download_model?round=25 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:06,600 - __main__ - INFO - Round 25 finished. Loss: 0.4478, Acc: 86.28%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:06] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:06,708 - __main__ - INFO - Round 25 finished. Loss: 0.3798, Acc: 88.06%
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:06,734 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:06,734 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:06] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:06,843 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:06,843 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:52:07,917 - __main__ - INFO - Round 25 finished. Loss: 0.0253, Acc: 100.00%
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:07,994 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:08] "GET /download_model?round=25 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:08] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:08,060 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:52:08,060 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:52:08,576 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:08] "GET /download_model?round=25 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:08,627 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:08] "GET /download_model?round=25 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:09,007 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:09] "GET /download_model?round=25 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:09,539 - __main__ - INFO - Round 25 finished. Loss: 0.7128, Acc: 76.02%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:09,654 - __main__ - INFO - Round 25 finished. Loss: 0.2762, Acc: 91.09%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:09] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:09,719 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[32;1mclient_007_1  |[0m 
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:09,719 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:10,041 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:10] "GET /download_model?round=25 HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:10,504 - __main__ - INFO - Round 25 finished. Loss: 0.6167, Acc: 79.54%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:10] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:10,567 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33;1mclient_006_1  |[0m 
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:10,567 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:52:10,575 - __main__ - INFO - --- New Round Detected: 25 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:10] "GET /download_model?round=25 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:10,638 - __main__ - INFO - Round 25 finished. Loss: 0.6390, Acc: 79.27%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:10] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:10,707 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35;1mclient_008_1  |[0m 
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:10,707 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 25 Acc: 51.61%, Loss: 1.7656 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 26. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:12] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:12,543 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:52:12,544 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:52:13,023 - __main__ - INFO - Round 25 finished. Loss: 0.0725, Acc: 98.97%
+[32mclient_002_1  |[0m 2026-01-20 19:52:13,032 - __main__ - INFO - Round 25 finished. Loss: 0.0136, Acc: 100.00%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:13] "POST /submit_update HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:13] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:52:13,163 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:52:13,163 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:52:13,186 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:52:13,186 - __main__ - INFO - Update submitted for Round 25. Waiting...
+[32;1mclient_017_1  |[0m 2026-01-20 19:52:14,980 - __main__ - INFO - Round 0 finished. Loss: 1.8853, Acc: 37.15%
+[33mclient_001_1  |[0m 2026-01-20 19:52:15,823 - __main__ - INFO - --- New Round Detected: 26 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:15] "GET /download_model?round=26 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Received update from client_017
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.5 - - [20/Jan/2026 19:52:15] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_017_1  |[0m 2026-01-20 19:52:16,214 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_017_1  |[0m 2026-01-20 19:52:16,214 - __main__ - INFO - Update submitted for Round 0. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:16,799 - __main__ - INFO - --- New Round Detected: 26 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:16] "GET /download_model?round=26 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:16,909 - __main__ - INFO - --- New Round Detected: 26 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:16] "GET /download_model?round=26 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:17,684 - __main__ - INFO - Round 26 finished. Loss: 0.2904, Acc: 90.28%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:17] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:17,810 - __main__ - INFO - Round 26 finished. Loss: 0.3581, Acc: 89.48%
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:17,818 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:17,818 - __main__ - INFO - Update submitted for Round 26. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:52:17,909 - __main__ - INFO - Round 26 finished. Loss: 0.0293, Acc: 100.00%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:17] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:17,977 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:52:17,977 - __main__ - INFO - Update submitted for Round 26. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:52:18,141 - __main__ - INFO - --- New Round Detected: 26 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:18] "GET /download_model?round=26 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 26 Acc: 50.23%, Loss: 1.6686 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 27. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:19] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:19,790 - __main__ - INFO - --- New Round Detected: 26 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:19] "GET /download_model?round=26 HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:19,830 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:19,830 - __main__ - INFO - Update submitted for Round 26. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:52:19,884 - __main__ - INFO - Round 26 finished. Loss: 0.0567, Acc: 99.27%
+[33mserver_1      |[0m INFO:__main__:Received update from client_004
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:19] "POST /submit_update HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:20,020 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34mclient_004_1  |[0m 2026-01-20 19:52:20,020 - __main__ - INFO - Update submitted for Round 26. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:20,633 - __main__ - INFO - --- New Round Detected: 27 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:20] "GET /download_model?round=27 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:20,789 - __main__ - INFO - --- New Round Detected: 27 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:20] "GET /download_model?round=27 HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:21,452 - __main__ - INFO - Round 26 finished. Loss: 0.3292, Acc: 89.42%
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:21,482 - __main__ - INFO - Round 27 finished. Loss: 0.6642, Acc: 77.95%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:21] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:21,589 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:21,589 - __main__ - INFO - Update submitted for Round 26. Waiting...
+[33mserver_1      |[0m INFO:__main__:Received update from client_008
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:21] "POST /submit_update HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:21,645 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:21,645 - __main__ - INFO - Update submitted for Round 27. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:22,359 - __main__ - INFO - Round 27 finished. Loss: 0.6502, Acc: 77.38%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:22] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:22,496 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:22,497 - __main__ - INFO - Update submitted for Round 27. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:52:22,606 - __main__ - INFO - --- New Round Detected: 27 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:22] "GET /download_model?round=27 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:52:23,231 - __main__ - INFO - --- New Round Detected: 27 ---
+[32mclient_002_1  |[0m 2026-01-20 19:52:23,251 - __main__ - INFO - --- New Round Detected: 27 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:23] "GET /download_model?round=27 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:23] "GET /download_model?round=27 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:23,516 - __main__ - INFO - Round 27 finished. Loss: 0.6779, Acc: 77.52%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33mserver_1      |[0m INFO:__main__:--- Round 27 Acc: 49.47%, Loss: 1.7793 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 28. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:25] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:25,879 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:52:25,879 - __main__ - INFO - Update submitted for Round 27. Waiting...
+[32mclient_002_1  |[0m 2026-01-20 19:52:26,095 - __main__ - INFO - Round 27 finished. Loss: 0.0126, Acc: 100.00%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:26] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:52:26,234 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:52:26,234 - __main__ - INFO - Update submitted for Round 27. Waiting...
+[32;1mclient_017_1  |[0m 2026-01-20 19:52:26,636 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.5 - - [20/Jan/2026 19:52:26] "GET /download_model?round=28 HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:52:27,422 - __main__ - INFO - Round 27 finished. Loss: 0.0112, Acc: 100.00%
+[33mserver_1      |[0m INFO:__main__:Received update from client_003
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:27] "POST /submit_update HTTP/1.1" 200 -
+[35mclient_003_1  |[0m 2026-01-20 19:52:27,557 - __main__ - INFO - 🚀 Model update submitted successfully.
+[35mclient_003_1  |[0m 2026-01-20 19:52:27,557 - __main__ - INFO - Update submitted for Round 27. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:27,881 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:27] "GET /download_model?round=28 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:28,043 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:28] "GET /download_model?round=28 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:28,645 - __main__ - INFO - Round 28 finished. Loss: 0.3033, Acc: 90.96%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:28] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:28,783 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:28,783 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:29,902 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:29] "GET /download_model?round=28 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:30,081 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:30] "GET /download_model?round=28 HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:30,224 - __main__ - INFO - Round 28 finished. Loss: 0.0380, Acc: 99.94%
+[33mserver_1      |[0m INFO:__main__:Received update from client_001
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:30] "POST /submit_update HTTP/1.1" 200 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:30,378 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33mclient_001_1  |[0m 2026-01-20 19:52:30,379 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:30,939 - __main__ - INFO - Round 28 finished. Loss: 0.3968, Acc: 87.98%
+[33mserver_1      |[0m INFO:__main__:Received update from client_009
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:31,660 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:31] "GET /download_model?round=28 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:31,725 - __main__ - INFO - --- New Round Detected: 28 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:31] "GET /download_model?round=28 HTTP/1.1" 200 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:31,870 - __main__ - INFO - Round 28 finished. Loss: 0.0147, Acc: 100.00%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:31] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[34mclient_004_1  |[0m 2026-01-20 19:52:31,933 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[34mclient_004_1  |[0m 
+[34mclient_004_1  |[0m 2026-01-20 19:52:31,933 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:32,576 - __main__ - INFO - --- New Round Detected: 28 ---
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:32,593 - __main__ - INFO - Round 28 finished. Loss: 0.5959, Acc: 81.06%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.10 - - [20/Jan/2026 19:52:32] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:32] "GET /download_model?round=28 HTTP/1.1" 200 -
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:32,659 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35;1mclient_008_1  |[0m 
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:32,660 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[33mserver_1      |[0m INFO:__main__:--- Round 28 Acc: 52.58%, Loss: 1.8513 ---
+[33mserver_1      |[0m INFO:__main__:--- Starting Round 29. Timeout: 300s ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.4 - - [20/Jan/2026 19:52:33] "POST /submit_update HTTP/1.1" 200 -
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:33,476 - __main__ - INFO - 🚀 Model update submitted successfully.
+[34;1mclient_009_1  |[0m 2026-01-20 19:52:33,476 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:33,552 - __main__ - INFO - Round 28 finished. Loss: 0.2777, Acc: 90.91%
+[33mserver_1      |[0m INFO:__main__:Received update from client_007
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.12 - - [20/Jan/2026 19:52:33] "POST /submit_update HTTP/1.1" 200 -
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:33,688 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32;1mclient_007_1  |[0m 2026-01-20 19:52:33,688 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:34,136 - __main__ - INFO - Round 28 finished. Loss: 0.5069, Acc: 82.82%
+[33mserver_1      |[0m INFO:__main__:Received update from client_006
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.21 - - [20/Jan/2026 19:52:34] "POST /submit_update HTTP/1.1" 200 -
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:34,291 - __main__ - INFO - 🚀 Model update submitted successfully.
+[33;1mclient_006_1  |[0m 2026-01-20 19:52:34,291 - __main__ - INFO - Update submitted for Round 28. Waiting...
+[36mclient_010_1  |[0m 2026-01-20 19:52:35,942 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:35] "GET /download_model?round=29 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:52:36,297 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:36] "GET /download_model?round=29 HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:37,286 - __main__ - INFO - Round 29 finished. Loss: 0.6225, Acc: 79.95%
+[33mserver_1      |[0m INFO:__main__:Received update from client_010
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.7 - - [20/Jan/2026 19:52:37] "POST /submit_update HTTP/1.1" 200 -
+[36mclient_010_1  |[0m 2026-01-20 19:52:37,441 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36mclient_010_1  |[0m 2026-01-20 19:52:37,441 - __main__ - INFO - Update submitted for Round 29. Waiting...
+[35mclient_003_1  |[0m 2026-01-20 19:52:37,619 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:37] "GET /download_model?round=29 HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:38,852 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:38] "GET /download_model?round=29 HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:52:39,172 - __main__ - INFO - Round 29 finished. Loss: 0.0155, Acc: 99.96%
+[33mserver_1      |[0m INFO:__main__:Received update from client_002
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.22 - - [20/Jan/2026 19:52:39] "POST /submit_update HTTP/1.1" 200 -
+[32mclient_002_1  |[0m 2026-01-20 19:52:39,309 - __main__ - INFO - 🚀 Model update submitted successfully.
+[32mclient_002_1  |[0m 2026-01-20 19:52:39,310 - __main__ - INFO - Update submitted for Round 29. Waiting...
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:39,689 - __main__ - INFO - Round 29 finished. Loss: 0.2799, Acc: 91.12%
+[33mserver_1      |[0m INFO:__main__:Received update from client_005
+[33mserver_1      |[0m INFO:__main__:--- Aggregating 5 updates ---
+[33mclient_001_1  |[0m 2026-01-20 19:52:40,442 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:40] "GET /download_model?round=29 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:Aggregation complete.
+[35mclient_003_1  |[0m 2026-01-20 19:52:41,816 - __main__ - INFO - Round 29 finished. Loss: 0.1510, Acc: 96.43%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.13 - - [20/Jan/2026 19:52:41] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[35mclient_003_1  |[0m 2026-01-20 19:52:41,880 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[35mclient_003_1  |[0m 
+[35mclient_003_1  |[0m 2026-01-20 19:52:41,880 - __main__ - INFO - Update submitted for Round 29. Waiting...
+[34mclient_004_1  |[0m 2026-01-20 19:52:41,997 - __main__ - INFO - --- New Round Detected: 29 ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.20 - - [20/Jan/2026 19:52:42] "GET /download_model?round=29 HTTP/1.1" 200 -
+[33mserver_1      |[0m INFO:__main__:--- Round 29 Acc: 49.53%, Loss: 1.8260 ---
+[33mserver_1      |[0m INFO:__main__:---Final model saved ---
+[33mserver_1      |[0m INFO:__main__:--- Training complete. ---
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.11 - - [20/Jan/2026 19:52:42] "POST /submit_update HTTP/1.1" 200 -
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:42,244 - __main__ - INFO - 🚀 Model update submitted successfully.
+[36;1mclient_005_1  |[0m 2026-01-20 19:52:42,244 - __main__ - INFO - Update submitted for Round 29. Waiting...
+[33mclient_001_1  |[0m 2026-01-20 19:52:42,604 - __main__ - INFO - Round 29 finished. Loss: 0.0343, Acc: 99.94%
+[33mserver_1      |[0m INFO:werkzeug:172.18.0.8 - - [20/Jan/2026 19:52:42] "[31m[1mPOST /submit_update HTTP/1.1[0m" 400 -
+[33mclient_001_1  |[0m 2026-01-20 19:52:42,667 - __main__ - ERROR - Update submission failed: {"error":"Not accepting updates"}
+[33mclient_001_1  |[0m 
+[33mclient_001_1  |[0m 2026-01-20 19:52:42,667 - __main__ - INFO - Update submitted for Round 29. Waiting...
+[35;1mclient_008_1  |[0m 2026-01-20 19:52:42,727 - __main__ - INFO - Server finished training. Exiting.
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mclient_008_1  |[0m [client_008] 🔋 LOW (Conserving) | Epochs=2 | KD=layer | Mu=0.0, Alpha=0.5
+[35;1mfl-rest_client_008_1 exited with code 0
+[0mStopping fl-rest_client_012_1 ... 
+Stopping fl-rest_client_002_1 ... 
+Stopping fl-rest_client_013_1 ... 
+Stopping fl-rest_client_018_1 ... 
+Stopping fl-rest_client_004_1 ... 
+Stopping fl-rest_client_014_1 ... 
+Stopping fl-rest_client_015_1 ... 
+Stopping fl-rest_client_011_1 ... 
+Stopping fl-rest_client_017_1 ... 
+Stopping fl-rest_client_006_1 ... 
+Stopping fl-rest_client_019_1 ... 
+Stopping fl-rest_client_016_1 ... 
+Stopping fl-rest_client_003_1 ... 
+Stopping fl-rest_client_010_1 ... 
+Stopping fl-rest_client_005_1 ... 
+Stopping fl-rest_client_001_1 ... 
+Stopping fl-rest_client_009_1 ... 
+Stopping fl-rest_client_007_1 ... 
+Stopping fl-rest_client_020_1 ... 
+Stopping docker-tc            ... 
+Stopping fl-rest_server_1     ... 
+Stopping docker-tc            ... done
+Stopping fl-rest_client_009_1 ... done
+Stopping fl-rest_client_007_1 ... done
+Stopping fl-rest_client_013_1 ... done
+Stopping fl-rest_client_015_1 ... done
+Stopping fl-rest_client_018_1 ... done
+Stopping fl-rest_client_017_1 ... done
+Stopping fl-rest_client_012_1 ... done
+Stopping fl-rest_client_020_1 ... done
+Stopping fl-rest_client_014_1 ... done
+Stopping fl-rest_client_011_1 ... done
+Stopping fl-rest_client_019_1 ... done
+Stopping fl-rest_client_016_1 ... done
+Stopping fl-rest_client_002_1 ... done
+Stopping fl-rest_client_005_1 ... done
+Stopping fl-rest_client_003_1 ... done
+Stopping fl-rest_client_006_1 ... done
+Stopping fl-rest_client_004_1 ... done
+Stopping fl-rest_client_010_1 ... done
+Stopping fl-rest_client_001_1 ... done
+Stopping fl-rest_server_1     ... done
+Aborting on container exit...

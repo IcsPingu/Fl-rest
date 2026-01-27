@@ -1,0 +1,251 @@
+using --exit-code-from implies --abort-on-container-exit
+Creating docker-tc ... 
+Creating fl-rest_server_1 ... 
+Creating docker-tc        ... done
+Creating fl-rest_server_1 ... done
+Creating fl-rest_client_006_1 ... 
+Creating fl-rest_client_004_1 ... 
+Creating fl-rest_client_019_1 ... 
+Creating fl-rest_client_014_1 ... 
+Creating fl-rest_client_005_1 ... 
+Creating fl-rest_client_003_1 ... 
+Creating fl-rest_client_016_1 ... 
+Creating fl-rest_client_011_1 ... 
+Creating fl-rest_client_008_1 ... 
+Creating fl-rest_client_018_1 ... 
+Creating fl-rest_client_020_1 ... 
+Creating fl-rest_client_009_1 ... 
+Creating fl-rest_client_007_1 ... 
+Creating fl-rest_client_013_1 ... 
+Creating fl-rest_client_015_1 ... 
+Creating fl-rest_client_001_1 ... 
+Creating fl-rest_client_017_1 ... 
+Creating fl-rest_client_002_1 ... 
+Creating fl-rest_client_010_1 ... 
+Creating fl-rest_client_012_1 ... 
+Creating fl-rest_client_019_1 ... done
+Creating fl-rest_client_014_1 ... done
+Creating fl-rest_client_004_1 ... done
+Creating fl-rest_client_006_1 ... done
+Creating fl-rest_client_013_1 ... done
+Creating fl-rest_client_015_1 ... done
+Creating fl-rest_client_012_1 ... done
+Creating fl-rest_client_008_1 ... done
+Creating fl-rest_client_003_1 ... done
+Creating fl-rest_client_005_1 ... done
+Creating fl-rest_client_011_1 ... done
+Creating fl-rest_client_018_1 ... done
+Creating fl-rest_client_017_1 ... done
+Creating fl-rest_client_020_1 ... done
+Creating fl-rest_client_016_1 ... done
+Creating fl-rest_client_007_1 ... done
+Creating fl-rest_client_009_1 ... done
+Creating fl-rest_client_002_1 ... done
+Creating fl-rest_client_001_1 ... done
+Creating fl-rest_client_010_1 ... done
+Attaching to docker-tc, fl-rest_server_1, fl-rest_client_019_1, fl-rest_client_014_1, fl-rest_client_004_1, fl-rest_client_006_1, fl-rest_client_013_1, fl-rest_client_015_1, fl-rest_client_012_1, fl-rest_client_008_1, fl-rest_client_003_1, fl-rest_client_005_1, fl-rest_client_011_1, fl-rest_client_018_1, fl-rest_client_017_1, fl-rest_client_020_1, fl-rest_client_016_1, fl-rest_client_007_1, fl-rest_client_009_1, fl-rest_client_002_1, fl-rest_client_001_1, fl-rest_client_010_1
+[36mdocker-tc     |[0m [s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[36mdocker-tc     |[0m [s6-init] ensuring user provided files have correct perms...exited 0.
+[36mdocker-tc     |[0m [fix-attrs.d] applying ownership & permissions fixes...
+[36mdocker-tc     |[0m [fix-attrs.d] done.
+[36mdocker-tc     |[0m [cont-init.d] executing container initialization scripts...
+[36mdocker-tc     |[0m [cont-init.d] 00-init: executing... 
+[36mdocker-tc     |[0m [cont-init.d] 00-init: exited 0.
+[36mdocker-tc     |[0m [cont-init.d] done.
+[36mdocker-tc     |[0m [services.d] starting services
+[36mdocker-tc     |[0m Starting garbage collector
+[36mdocker-tc     |[0m Starting HTTP server on 127.0.0.1:4080
+[36mdocker-tc     |[0m + exec hapttic -file /docker-tc/bin/httpd.sh -logErrors -host 127.0.0.1 -port 4080
+[36mdocker-tc     |[0m [services.d] done.
+[36mdocker-tc     |[0m 2026/01/27 14:08:49 Thanks for using hapttic v1.0.0
+[36mdocker-tc     |[0m 2026/01/27 14:08:49 Listening on 127.0.0.1:4080
+[36mdocker-tc     |[0m 2026/01/27 14:08:49 Forwarding requests to /docker-tc/bin/httpd.sh
+[36mdocker-tc     |[0m 2026/01/27 14:08:49 Logging errors to stderr
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m  ____          _              _____         ___ ___ _        _____         _           _
+[36mdocker-tc     |[0m |    \ ___ ___| |_ ___ ___   |_   _|___ ___|  _|  _|_|___   |     |___ ___| |_ ___ ___| |
+[36mdocker-tc     |[0m |  |  | . |  _| '_| -_|  _|    | | |  _| .'|  _|  _| |  _|  |   --| . |   |  _|  _| . | |
+[36mdocker-tc     |[0m |____/|___|___|_,_|___|_|      |_| |_| |__,|_| |_| |_|___|  |_____|___|_|_|_| |_| |___|_|
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m Starting Docker Traffic Control 18.12
+[36mdocker-tc     |[0m https://github.com/lukaszlach/docker-tc
+[36mdocker-tc     |[0m 
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [72653eb63fc8] Notice: Skipping container, service was disabled by label
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [bd19146b9070] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [438bf01636a0] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [c314c85387cb] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m Error response from daemon: Container 3e4b2842dc618e2afe83311ecd360e727849572adbdf41474062df0f06f43f7f is restarting, wait until the container is running
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [3e4b2842dc61] Warning: Network has no corresponding virtual network interface
+[36mdocker-tc     |[0m [2026-01-27T14:08:49+00:00] [878a4049cc3d] Notice: Skipping container, no valid labels found
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [cdf2517aa4d2] Set delay=200ms, loss=1% on veth5de50b4
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [cdf2517aa4d2] Set bandwidth-limit=5mbps on veth5de50b4
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [cdf2517aa4d2] Controlling traffic of the container /fl-rest_client_019_1 on veth5de50b4
+[33mserver_1      |[0m TensorFlow installation not found - running with reduced feature set.
+[33mserver_1      |[0m 
+[33mserver_1      |[0m NOTE: Using experimental fast data loading logic. To disable, pass
+[33mserver_1      |[0m     "--load_fast=false" and report issues on GitHub. More details:
+[33mserver_1      |[0m     https://github.com/tensorflow/tensorboard/issues/4784
+[33mserver_1      |[0m 
+[33mserver_1      |[0m TensorBoard 2.20.0 at http://0.0.0.0:6006/ (Press CTRL+C to quit)
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [20a6fcd87e5a] Set delay=200ms, loss=1% on vethf949930
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [20a6fcd87e5a] Set bandwidth-limit=5mbps on vethf949930
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [20a6fcd87e5a] Controlling traffic of the container /fl-rest_client_014_1 on vethf949930
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [edee312049c8] Set delay=20ms on veth6cffe1a
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [edee312049c8] Set bandwidth-limit=1gbit on veth6cffe1a
+[33mserver_1      |[0m INFO:__main__:Writing TensorBoard logs to: fl_logs/tensorboard/Cenario_C_Hibrido_Mu0.01_Alpha0.3_1408
+[33mserver_1      |[0m INFO:__main__:Loading CIFAR-10 test dataset...
+[36mdocker-tc     |[0m [2026-01-27T14:08:50+00:00] [edee312049c8] Controlling traffic of the container /fl-rest_client_004_1 on veth6cffe1a
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ba2184859864] Set delay=20ms on vetha48cf49
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ba2184859864] Set bandwidth-limit=1gbit on vetha48cf49
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ba2184859864] Controlling traffic of the container /fl-rest_client_006_1 on vetha48cf49
+[33;1mclient_006_1  |[0m Traceback (most recent call last):
+[33;1mclient_006_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[33;1mclient_006_1  |[0m     return _run_code(code, main_globals, None,
+[33;1mclient_006_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[33;1mclient_006_1  |[0m     exec(code, run_globals)
+[33;1mclient_006_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[33;1mclient_006_1  |[0m     from client.trainer import train_model
+[33;1mclient_006_1  |[0m   File "/app/client/trainer.py", line 8
+[33;1mclient_006_1  |[0m     from shared.models import get_model'
+[33;1mclient_006_1  |[0m                                        ^
+[33;1mclient_006_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[34mclient_014_1  |[0m Traceback (most recent call last):
+[34mclient_014_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[34mclient_014_1  |[0m     return _run_code(code, main_globals, None,
+[34mclient_014_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[34mclient_014_1  |[0m     exec(code, run_globals)
+[34mclient_014_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[34mclient_014_1  |[0m     from client.trainer import train_model
+[34mclient_014_1  |[0m   File "/app/client/trainer.py", line 8
+[34mclient_014_1  |[0m     from shared.models import get_model'
+[34mclient_014_1  |[0m                                        ^
+[34mclient_014_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[35mclient_003_1  |[0m Traceback (most recent call last):
+[35mclient_003_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[35mclient_003_1  |[0m     return _run_code(code, main_globals, None,
+[35mclient_003_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[35mclient_003_1  |[0m     exec(code, run_globals)
+[35mclient_003_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[35mclient_003_1  |[0m     from client.trainer import train_model
+[35mclient_003_1  |[0m   File "/app/client/trainer.py", line 8
+[35mclient_003_1  |[0m     from shared.models import get_model'
+[35mclient_003_1  |[0m                                        ^
+[35mclient_003_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[35;1mclient_018_1  |[0m Traceback (most recent call last):
+[35;1mclient_018_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[35;1mclient_018_1  |[0m     return _run_code(code, main_globals, None,
+[35;1mclient_018_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[35;1mclient_018_1  |[0m     exec(code, run_globals)
+[35;1mclient_018_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[35;1mclient_018_1  |[0m     from client.trainer import train_model
+[35;1mclient_018_1  |[0m   File "/app/client/trainer.py", line 8
+[35;1mclient_018_1  |[0m     from shared.models import get_model'
+[35;1mclient_018_1  |[0m                                        ^
+[35;1mclient_018_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[36;1mclient_015_1  |[0m Traceback (most recent call last):
+[36;1mclient_015_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[36;1mclient_015_1  |[0m     return _run_code(code, main_globals, None,
+[36;1mclient_015_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[36;1mclient_015_1  |[0m     exec(code, run_globals)
+[36;1mclient_015_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[36;1mclient_015_1  |[0m     from client.trainer import train_model
+[36;1mclient_015_1  |[0m   File "/app/client/trainer.py", line 8
+[36;1mclient_015_1  |[0m     from shared.models import get_model'
+[36;1mclient_015_1  |[0m                                        ^
+[36;1mclient_015_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ed3aa3a3ccf3] Set delay=200ms, loss=1% on veth2a39753
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ed3aa3a3ccf3] Set bandwidth-limit=5mbps on veth2a39753
+[32mclient_012_1  |[0m Traceback (most recent call last):
+[32mclient_012_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[32mclient_012_1  |[0m     return _run_code(code, main_globals, None,
+[32mclient_012_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[32mclient_012_1  |[0m     exec(code, run_globals)
+[32mclient_012_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[32mclient_012_1  |[0m     from client.trainer import train_model
+[32mclient_012_1  |[0m   File "/app/client/trainer.py", line 8
+[32mclient_012_1  |[0m     from shared.models import get_model'
+[32mclient_012_1  |[0m                                        ^
+[32mclient_012_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [ed3aa3a3ccf3] Controlling traffic of the container /fl-rest_client_013_1 on veth2a39753
+[34;1mclient_019_1  |[0m Traceback (most recent call last):
+[34;1mclient_019_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[34;1mclient_019_1  |[0m     return _run_code(code, main_globals, None,
+[34;1mclient_019_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[34;1mclient_019_1  |[0m     exec(code, run_globals)
+[34;1mclient_019_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[34;1mclient_019_1  |[0m     from client.trainer import train_model
+[34;1mclient_019_1  |[0m   File "/app/client/trainer.py", line 8
+[34;1mclient_019_1  |[0m     from shared.models import get_model'
+[34;1mclient_019_1  |[0m                                        ^
+[34;1mclient_019_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[33mserver_1      |[0m INFO:__main__:Test dataset loaded.
+[33mserver_1      |[0m INFO:__main__:Initial model for round 0 created.
+[33mserver_1      |[0m Files already downloaded and verified
+[33mserver_1      |[0m  * Serving Flask app 'app'
+[33mserver_1      |[0m  * Debug mode: off
+[33mserver_1      |[0m INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+[33mserver_1      |[0m  * Running on all addresses (0.0.0.0)
+[33mserver_1      |[0m  * Running on http://127.0.0.1:5000
+[33mserver_1      |[0m  * Running on http://172.18.0.2:5000
+[33mserver_1      |[0m INFO:werkzeug:[33mPress CTRL+C to quit[0m
+[35;1mclient_008_1  |[0m Traceback (most recent call last):
+[35;1mclient_008_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[35;1mclient_008_1  |[0m     return _run_code(code, main_globals, None,
+[35;1mclient_008_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[35;1mclient_008_1  |[0m     exec(code, run_globals)
+[35;1mclient_008_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[35;1mclient_008_1  |[0m     from client.trainer import train_model
+[35;1mclient_008_1  |[0m   File "/app/client/trainer.py", line 8
+[35;1mclient_008_1  |[0m     from shared.models import get_model'
+[35;1mclient_008_1  |[0m                                        ^
+[35;1mclient_008_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[34;1mclient_009_1  |[0m Traceback (most recent call last):
+[34;1mclient_009_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[34;1mclient_009_1  |[0m     return _run_code(code, main_globals, None,
+[34;1mclient_009_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[34;1mclient_009_1  |[0m     exec(code, run_globals)
+[34;1mclient_009_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[34;1mclient_009_1  |[0m     from client.trainer import train_model
+[34;1mclient_009_1  |[0m   File "/app/client/trainer.py", line 8
+[34;1mclient_009_1  |[0m     from shared.models import get_model'
+[34;1mclient_009_1  |[0m                                        ^
+[34;1mclient_009_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[32mclient_002_1  |[0m Traceback (most recent call last):
+[32mclient_002_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[32mclient_002_1  |[0m     return _run_code(code, main_globals, None,
+[32mclient_002_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[32mclient_002_1  |[0m     exec(code, run_globals)
+[32mclient_002_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[32mclient_002_1  |[0m     from client.trainer import train_model
+[32mclient_002_1  |[0m   File "/app/client/trainer.py", line 8
+[32mclient_002_1  |[0m     from shared.models import get_model'
+[32mclient_002_1  |[0m                                        ^
+[32mclient_002_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[35mclient_013_1  |[0m Traceback (most recent call last):
+[35mclient_013_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[35mclient_013_1  |[0m     return _run_code(code, main_globals, None,
+[35mclient_013_1  |[0m   File "/opt/conda/lib/python3.10/runpy.py", line 86, in _run_code
+[35mclient_013_1  |[0m     exec(code, run_globals)
+[35mclient_013_1  |[0m   File "/app/client/app.py", line 9, in <module>
+[35mclient_013_1  |[0m     from client.trainer import train_model
+[35mclient_013_1  |[0m   File "/app/client/trainer.py", line 8
+[35mclient_013_1  |[0m     from shared.models import get_model'
+[35mclient_013_1  |[0m                                        ^
+[35mclient_013_1  |[0m SyntaxError: unterminated string literal (detected at line 8)
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [7112f7a5214e] Set delay=200ms, loss=1% on veth8cd628e
+[36mdocker-tc     |[0m [2026-01-27T14:08:51+00:00] [7112f7a5214e] Set bandwidth-limit=5mbps on veth8cd628e
+[33;1mfl-rest_client_006_1 exited with code 1
+[0mStopping fl-rest_client_007_1 ... 
+Stopping fl-rest_client_010_1 ... 
+Stopping fl-rest_client_001_1 ... 
+Stopping fl-rest_client_016_1 ... 
+Stopping fl-rest_server_1     ... 
+Stopping docker-tc            ... 
+Stopping fl-rest_client_016_1 ... done
+Stopping fl-rest_client_001_1 ... done
+Stopping fl-rest_client_007_1 ... done
+Stopping fl-rest_client_010_1 ... done
+Stopping docker-tc            ... done
+Stopping fl-rest_server_1     ... done
+137
+Aborting on container exit...
