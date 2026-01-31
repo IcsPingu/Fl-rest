@@ -1,89 +1,77 @@
-import os
+import pandas as pd
 import matplotlib.pyplot as plt
-from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
+import seaborn as sns
+import os
 
-# --- CONFIGURATION AREA -----------------------------------------------------
-# 1. Path to your experiment folders (where the 'events.out.tfevents' files are)
-#    Example: "runs/Sep15_12-30-55_Baseline"
-LOG_DIR_BASELINE = "fl_logs/tensorboard/Cenario_C_Hibrido_Mu0.01_Alpha0.0_1506"  
-LOG_DIR_HYBRID   = "fl_logs/tensorboard/Cenario_C_Hibrido_Mu0.01_Alpha0.1_2131"
+# --- CONFIG ---
+plt.style.use('seaborn-v0_8-whitegrid')
+COLORS = {"New ASTRA (Seed 42)": "#9467bd", "FedProx": "#1f77b4", "Old ASTRA (Avg)": "#7f7f7f"}
 
-# 2. The Tag you want to plot (e.g., 'Test/Accuracy', 'Train/Loss', 'Accuracy')
-#    If you don't know it, run the script once; it will print available tags.
-TAG_NAME = "Global/Accuracy"  
-# ----------------------------------------------------------------------------
-
-def find_event_file(log_dir):
-    """Recursively search for the .tfevents file in a directory."""
-    if not os.path.exists(log_dir):
-        return None
-    for root, dirs, files in os.walk(log_dir):
-        for file in files:
-            if "tfevents" in file:
-                return os.path.join(root, file)
-    return None
-
-def extract_data(log_dir, tag):
-    """Parses the tfevents file and extracts step vs value."""
-    event_path = find_event_file(log_dir)
+def load_data():
+    data = []
     
-    if not event_path:
-        print(f"❌ No event file found in: {log_dir}")
-        return [], []
+    # 1. NEW ASTRA SEED 42 (The one you just ran)
+    # Ensure this file exists! You might need to rename it first if you haven't.
+    new_astra_path = "results_metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
+    if os.path.exists(new_astra_path):
+        df = pd.read_csv(new_astra_path)
+        df['method'] = "New ASTRA (Seed 42)"
+        data.append(df)
+    else:
+        # Fallback: Check if it's still named generic 'metrics_Scenario4_Hybrid.csv'
+        fallback_path = "results_metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
+        if os.path.exists(fallback_path):
+            print(f"⚠️  Found generic file '{fallback_path}'. Assuming it is Seed 42.")
+            df = pd.read_csv(fallback_path)
+            df['method'] = "New ASTRA (Seed 42)"
+            data.append(df)
+        else:
+            print("❌ Could not find Seed 42 data.")
 
-    print(f"📂 Loading: {event_path}")
-    
-    # Load the event accumulator
-    # size_guidance=0 loads all events (no downsampling)
-    ea = EventAccumulator(event_path, size_guidance={ 'scalars': 0 })
-    ea.Reload()
+    # 2. FEDPROX (Baseline)
+    fedprox_path = "results_metrics/metrics_Scenario2_FedProx.csv"
+    if os.path.exists(fedprox_path):
+        df = pd.read_csv(fedprox_path)
+        df['method'] = "FedProx"
+        data.append(df)
 
-    # Check available tags
-    valid_tags = ea.Tags()['scalars']
-    if tag not in valid_tags:
-        print(f"   ⚠️  Tag '{tag}' not found. Available tags: {valid_tags}")
-        return [], []
+    if not data: return pd.DataFrame()
+    return pd.concat(data, ignore_index=True)
 
-    # Extract data
-    events = ea.Scalars(tag)
-    steps = [x.step for x in events]
-    values = [x.value for x in events]
-    
-    return steps, values
+def plot_results(df):
+    if df.empty: return
 
-def plot_comparison():
-    # 1. Extract Data
-    print("--- Extracting Baseline Data ---")
-    steps_base, val_base = extract_data(LOG_DIR_BASELINE, TAG_NAME)
-    
-    print("\n--- Extracting Hybrid Data ---")
-    steps_hybrid, val_hybrid = extract_data(LOG_DIR_HYBRID, TAG_NAME)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 
-    # 2. Plotting
-    plt.figure(figsize=(10, 6))
+    # --- 1. ACCURACY PLOT ---
+    sns.lineplot(data=df, x="round", y="accuracy", hue="method", palette=COLORS, ax=ax1, linewidth=2.5)
+    ax1.set_title("Accuracy Check (Seed 42)")
+    ax1.set_ylabel("Accuracy (%)")
+    ax1.grid(True, linestyle='--', alpha=0.6)
 
-    # Plot Baseline
-    if steps_base:
-        plt.plot(steps_base, val_base, label='Baseline (FedProx)', 
-                 color='gray', linestyle='--', linewidth=2, alpha=0.8)
-    
-    # Plot Hybrid
-    if steps_hybrid:
-        plt.plot(steps_hybrid, val_hybrid, label='Hybrid (Ours)', 
-                 color='purple', marker='o', markersize=4, linewidth=2)
+    # --- 2. LOSS PLOT ---
+    sns.lineplot(data=df, x="round", y="loss", hue="method", palette=COLORS, ax=ax2, linewidth=2.5)
+    ax2.set_title("Loss Check (Seed 42)")
+    ax2.set_ylabel("Loss")
+    ax2.grid(True, linestyle='--', alpha=0.6)
 
-    # Formatting
-    plt.title(f"Performance Comparison: {TAG_NAME}", fontsize=14)
-    plt.xlabel("Communication Rounds", fontsize=12)
-    plt.ylabel(TAG_NAME, fontsize=12)
-    plt.grid(True, linestyle=':', alpha=0.6)
-    plt.legend(fontsize=12)
-    
-    # Save
-    output_filename = "thesis_comparison_plot.png"
-    plt.savefig(output_filename, dpi=300)
-    print(f"\n✅ Graph saved to '{output_filename}'")
-    plt.show()
+    plt.tight_layout()
+    plt.savefig("check_seed42_performance.png", dpi=300)
+    print("✅ Performance plot saved: check_seed42_performance.png")
+
+def check_time():
+    # Check Training Time for the new run
+    times_path = "results_metrics/times_Scenario4_Hybrid_Seed42_new.csv" # Or _Seed42.csv
+    if os.path.exists(times_path):
+        try:
+            df = pd.read_csv(times_path, header=None, names=['round', 'client', 'duration'])
+            total_time = df['duration'].sum()
+            print(f"\n⏱️  NEW ASTRA TIME (Total): {total_time:.2f} seconds")
+            print(f"   (Compare this to FedProx ~1327s)")
+        except:
+            print("⚠️  Could not read time file.")
 
 if __name__ == "__main__":
-    plot_comparison()
+    df = load_data()
+    plot_results(df)
+    check_time()

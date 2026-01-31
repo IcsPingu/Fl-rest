@@ -35,7 +35,7 @@ services:
   # Servidor Central
   server:
     build: .
-    image: fl-framework
+    image: fl-framewdocker compose -p flrest-monitoring -f docker-compose.monitoring.yml up -dork
     container_name: fl-rest_server_1
     command: >
       sh -c "tensorboard --logdir=/app/fl_logs/tensorboard --port=6006 --host=0.0.0.0 &

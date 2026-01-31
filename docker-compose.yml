@@ -1,5 +1,3 @@
-
-
 # Template base para todos os clientes (evita repetição)
 x-client-template: &client-template
   image: fl-framework
@@ -43,6 +41,7 @@ services:
       - ./server:/app/server
       - ./shared:/app/shared
       - ./config.py:/app/config.py
+      - ./results_metrics:/app/results
     # Removemos o Healthcheck para evitar que o Docker mate o servidor por lentidao
     deploy:
       resources:

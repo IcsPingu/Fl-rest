@@ -10,14 +10,11 @@ class SimpleCNN(nn.Module):
         super(SimpleCNN, self).__init__()
         # Block 1
         self.conv1 = nn.Conv2d(3, 6, 5)
-        # GroupNorm(num_groups, num_channels)
-        # We split 6 channels into 2 groups (3 channels each)
         self.gn1 = nn.GroupNorm(2, 6) 
         self.pool = nn.MaxPool2d(2, 2)
         
         # Block 2
         self.conv2 = nn.Conv2d(6, 16, 5)
-        # We split 16 channels into 4 groups (4 channels each)
         self.gn2 = nn.GroupNorm(4, 16)
         
         # Fully Connected Layers
@@ -26,29 +23,37 @@ class SimpleCNN(nn.Module):
         self.fc3 = nn.Linear(84, 10)
 
     def forward(self, x, return_features=False):
-        # Block 1: Conv -> Norm -> ReLU -> Pool
+        # Block 1
         x = self.conv1(x)
         x = self.gn1(x) 
         x = F.relu(x)
         x = self.pool(x)
         
-        # Block 2: Conv -> Norm -> ReLU -> Pool
+        # Block 2
         x = self.conv2(x)
         x = self.gn2(x)
         x = F.relu(x)
         x = self.pool(x)
 
-        # --- CAPTURE FEATURES ---
-        features = x.clone()
-
+        # Flatten
         x = torch.flatten(x, 1) 
+        
+        # FC 1
         x = F.relu(self.fc1(x))
+        
+        # FC 2
         x = F.relu(self.fc2(x))
-        x = self.fc3(x)
+
+        # --- UPDATE FOR MOON ---
+        # Capture features HERE (vector of size 84), not earlier.
+        features = x 
+
+        # Final Classification
+        logits = self.fc3(x)
         
         if return_features:
-            return x, features
-        return x
+            return logits, features
+        return logits
 
 class SimpleMLP(nn.Module):
     """
@@ -56,27 +61,26 @@ class SimpleMLP(nn.Module):
     """
     def __init__(self):
         super(SimpleMLP, self).__init__()
-        self.fc1 = nn.Linear(32 * 32 * 3, 512) # CIFAR is 32x32x3
+        self.fc1 = nn.Linear(32 * 32 * 3, 512) 
         self.fc2 = nn.Linear(512, 256)
         self.fc3 = nn.Linear(256, 10)
 
     def forward(self, x, return_features=False):
         x = torch.flatten(x, 1)
         x = F.relu(self.fc1(x))
-        
-        # Capture features after the second hidden layer
         x = F.relu(self.fc2(x))
-        features = x.clone()
+        
+        # This was already correct!
+        features = x
 
-        x = self.fc3(x)
+        logits = self.fc3(x)
         
         if return_features:
-            return x, features
-        return x
+            return logits, features
+        return logits
 
 # --- Model Registry ---
 def get_model(model_name):
-    """Factory function to instantiate models by name."""
     if model_name == "SimpleCNN":
         return SimpleCNN()
     elif model_name == "SimpleMLP":

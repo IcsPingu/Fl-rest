@@ -22,6 +22,20 @@ from server.strategies import get_strategy
 import config
 from server.aggregator import federated_average
 
+# --- Add this near the top (after imports) ---
+RESULTS_DIR = "results"  # Matches the /app/results volume
+if not os.path.exists(RESULTS_DIR):
+    os.makedirs(RESULTS_DIR)
+
+METRICS_FILE = os.path.join(RESULTS_DIR, "metrics.csv")
+TIMES_FILE = os.path.join(RESULTS_DIR, "training_times.csv")
+
+# Initialize metrics file with headers if it doesn't exist
+if not os.path.exists(METRICS_FILE):
+    with open(METRICS_FILE, "w") as f:
+        f.write("round,accuracy,loss\n")
+
+
 # --- 1. CONFIGURAÇÃO DE LOG (MOVIDO PARA O TOPO) ---
 logging.basicConfig(level=logging.INFO, format='INFO:%(name)s:%(message)s')
 logger = logging.getLogger(__name__)
@@ -277,6 +291,11 @@ def check_and_aggregate(test_loader):
             tb_writer.add_scalar("Global/Loss", loss, fl_state["current_round"])
             tb_writer.flush()
 
+            # --- NEW CODE (ADD THIS TO SAVE CSV) ---
+            logger.info(f"💾 Saving metrics to {METRICS_FILE}...")
+            with open(METRICS_FILE, "a") as f:
+                f.write(f"{fl_state['current_round']},{accuracy},{loss}\n")
+
             logger.info(f"--- Round {current_round} Acc: {accuracy:.2f}%, Loss: {loss:.4f} ---")
             
             global_models_by_round[current_round + 1] = new_global_model_tensors
@@ -387,7 +406,7 @@ def submit_update():
         
         # 2. Save to CSV (for easy graphing later)
         # Saves as: Round, ClientID, Seconds
-        with open("training_times.csv", "a") as f:
+        with open(TIMES_FILE, "a") as f:
             f.write(f"{fl_state['current_round']},{client_id},{train_time}\n")
         # --- END OF NEW CODE ---
 

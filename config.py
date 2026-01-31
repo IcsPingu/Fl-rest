@@ -1,4 +1,21 @@
-# config.py
+# --- EXPERIMENT CONFIGURATION (Managed by run.sh) ---
+SCENARIO_NAME = "2_FedProx"
+FEDPROX_MU = 0.01
+KD_ALPHA = 0.0
+ENABLE_GRADUATION = False
+SEED = 999
+
+# --- MOON CONFIGURATION ---
+# (Default is 0.0/False. run.sh will change this to 1.0/5.0 when needed)
+MOON_MU = 0.0
+MOON_TEMPERATURE = 0.5 # Hyperparameter for the contrastive loss
+
+# --- KNOWLEDGE DISTILLATION SETTINGS ---
+ENABLE_PARAMETER_BASED_KD = True 
+ENABLE_FEATURE_BASED_KD = False
+KD_TEMPERATURE = 3.0
+KD_TYPE = "logits"
+KD_CONFIDENCE_THRESH = 0.0
 
 # --- Server Configuration ---
 MODEL_NAME = "SimpleCNN"
@@ -9,8 +26,7 @@ DEVICE = "auto"
 TOTAL_ROUNDS = 50
 SAVED_MODEL_NAME = "final_global_model.pth"
 
-# --- Client Limits (AJUSTADO PARA SEU SERVIDOR) ---
-# Se você tem 8 clientes, o servidor deve esperar exatamente 8.
+# --- Client Limits ---
 MIN_CLIENTS_PER_ROUND = 5
 MIN_CLIENTS_FOR_AGGREGATION = 5
 
@@ -22,26 +38,14 @@ LEARNING_RATE = 0.005
 MOMENTUM = 0.9
 POLL_INTERVAL = 10
 
-# --- Data Configuration (Non-IID) ---
-DIRICHLET_ALPHA = 0.1
+# --- Data Configuration ---
+DIRICHLET_ALPHA = 0.5
 RANDOM_SEED = 42
 
-# --- Simulation of FL Conditions ---
+# --- Simulation Limits ---
+ROUND_TIMEOUT_SEC = 600  # <--- KEEP THIS AT 600 FOR CPU CLIENTS
 CLIENT_DROPOUT_RATE = 0.0
-ROUND_TIMEOUT_SEC = 300
 SLOW_SENDER_RATE = 0.0
 SLOW_SENDER_DELAY_SEC = 30
 NETWORK_LATENCY_RATE = 0.0
 NETWORK_LATENCY_DELAY_SEC = 5
-
-# --- FEDPROX CONFIGURATION (Cenário C) ---
-FEDPROX_MU = 0.01
-KD_TYPE = "logits"
-
-# --- KNOWLEDGE DISTILLATION CONFIGURATION (Cenário C) ---
-ENABLE_PARAMETER_BASED_KD = True  # LIGADO (Professor)
-ENABLE_FEATURE_BASED_KD = False   # DESLIGADO
-KD_TEMPERATURE = 3.0
-KD_ALPHA = 0.1
-KD_CONFIDENCE_THRESH = 0.0
-SCENARIO_NAME = "Scenario_C_Hybrid_v16"

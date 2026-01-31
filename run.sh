@@ -5,33 +5,45 @@ set -e
 # 1. CONFIGURATION (EDIT THIS BEFORE RUNNING)
 # ==========================================
 
-# --- Choose your Scenario Name (Change this manually every run!) ---
-SCENARIO_NAME="Scenario_C_Hybrid_v16"
-# --- SCENARIO SETTINGS (Uncomment the one you want) ---
+# --- Choose your Scenario (Uncomment ONE block below) ---
 
-# [SCENARIO A] Only FedProx
+# [CENÁRIO 1] FedAvg (Baseline Puro)
+ #SCENARIO_NAME="1_FedAvg"
+ #FEDPROX_MU=0.0
+ #KD_ALPHA=0.0
+ #ENABLE_GRADUATION="False"
+
+# [CENÁRIO 2] FedProx (Baseline Forte)
+ SCENARIO_NAME="2_FedProx"
+ FEDPROX_MU=0.01
+ KD_ALPHA=0.0
+ ENABLE_GRADUATION="False"
+ MOON_MU=0.0
+
+# [CENÁRIO 3] KD Constante (Sem Graduação - O "Vilão" da sua tese)
+ #SCENARIO_NAME="3_KD_Constant"
+ #FEDPROX_MU=0.01
+ #KD_ALPHA=0.3
+ #ENABLE_GRADUATION="False"
+
+# [CENÁRIO 4] Híbrido (O "Herói" - Seu Método)
+#SCENARIO_NAME="4_Hybrid_Ours"
 #FEDPROX_MU=0.01
-#KD_ALPHA=0.0
-#KD_TYPE="logits"
+#KD_ALPHA=0.3
+#ENABLE_GRADUATION="True"
+#MOON_MU=0.0 
 
-# [SCENARIO B] Only KD (Logits)
-# FEDPROX_MU=0.0
-# KD_ALPHA=0.5
-# KD_TYPE="logits"
-
-# [SCENARIO C] Hybrid
-FEDPROX_MU=0.01
-KD_ALPHA=0.1
-KD_TYPE="logits"
-
-# [SCENARIO D] KD Layer Based (New)
-# FEDPROX_MU=0.0
-# KD_ALPHA=0.5
-# KD_TYPE="layer"
+# [CENÁRIO 5] MOON (Contrastive Learning)
+ #SCENARIO_NAME="5_MOON"
+ #FEDPROX_MU=0.0
+ #KD_ALPHA=0.0
+ #ENABLE_GRADUATION="False"
+ #MOON_MU=1.0           #<-- High weight is common for MOsON
+ #MOON_TEMPERATURE=0.5
 
 
 # --- System Settings ---
-LOG_DIR="my_logs"  # Saving here to avoid permission errors
+LOG_DIR="my_logs"
 CONFIG_FILE="config.py"
 CLIENTS_HIGH_PERF=10 
 CLIENTS_LOW_PERF=10   
@@ -43,7 +55,7 @@ TOTAL_ROUNDS=50
 
 echo "------------------------------------------------------------------"
 echo "▶️ PREPARING: $SCENARIO_NAME"
-echo "   Settings: MU=$FEDPROX_MU | ALPHA=$KD_ALPHA | TYPE=$KD_TYPE"
+echo "   Settings: MU=$FEDPROX_MU | ALPHA=$KD_ALPHA | GRAD=$ENABLE_GRADUATION"
 echo "------------------------------------------------------------------"
 
 if [ ! -f "$CONFIG_FILE" ]; then
@@ -51,38 +63,28 @@ if [ ! -f "$CONFIG_FILE" ]; then
     exit 1
 fi
 
-# 1. Update config.py
+# 1. Update config.py with SED
 # Base params
-sed -i "s/^TOTAL_ROUNDS = .*/TOTAL_ROUNDS = $TOTAL_ROUNDS/" $CONFIG_FILE
-sed -i "s/^TOTAL_CLIENTS = .*/TOTAL_CLIENTS = $(($CLIENTS_HIGH_PERF + $CLIENTS_LOW_PERF))/" $CONFIG_FILE
-
-# Scenario params
+sed -i "s/^SCENARIO_NAME = .*/SCENARIO_NAME = \"$SCENARIO_NAME\"/" $CONFIG_FILE
 sed -i "s/^FEDPROX_MU = .*/FEDPROX_MU = $FEDPROX_MU/" $CONFIG_FILE
 sed -i "s/^KD_ALPHA = .*/KD_ALPHA = $KD_ALPHA/" $CONFIG_FILE
-sed -i "s/^SCENARIO_NAME = .*/SCENARIO_NAME = \"$SCENARIO_NAME\"/" $CONFIG_FILE
-
-# Handle KD_TYPE (Add it if missing, replace it if present)
-if grep -q "KD_TYPE =" "$CONFIG_FILE"; then
-    sed -i "s/^KD_TYPE = .*/KD_TYPE = \"$KD_TYPE\"/" $CONFIG_FILE
-else
-    echo "KD_TYPE = \"$KD_TYPE\"" >> $CONFIG_FILE
-fi
+sed -i "s/^ENABLE_GRADUATION = .*/ENABLE_GRADUATION = $ENABLE_GRADUATION/" $CONFIG_FILE
+sed -i "s/^MOON_MU = .*/MOON_MU = $MOON_MU/" $CONFIG_FILE
 
 echo "✅ Configuration updated."
 
-# 2. Docker Setup
+# 2. Docker Setup (Critical for clean experiments)
 echo "🧹 Cleaning up containers..."
-docker-compose stop > /dev/null 2>&1
-docker-compose rm -f > /dev/null 2>&1
+docker-compose down --remove-orphans > /dev/null 2>&1
 
-echo "🔄 Generating docker-compose..."
-python generate_compose.py --high $CLIENTS_HIGH_PERF --low $CLIENTS_LOW_PERF > /dev/null
+#echo "🔄 Generating docker-compose..."
+#python3 generate_compose.py --high $CLIENTS_HIGH_PERF --low $CLIENTS_LOW_PERF > /dev/null
 
 echo "🚀 Building images..."
 docker-compose build > /dev/null
 
 echo "📦 Preparing Data..."
-docker-compose run --rm server python prepare_data.py > /dev/null
+docker-compose run --rm server python3 prepare_data.py > /dev/null
 
 # 3. Execution
 mkdir -p $LOG_DIR
@@ -97,4 +99,7 @@ docker-compose up --exit-code-from server > $LOG_FILE 2>&1
 
 echo "------------------------------------------------------------------"
 echo "✅ FINISHED: $SCENARIO_NAME"
+echo "💾 Saving metrics..."
+docker cp fl-rest_server_1:/app/results/metrics.csv "${LOG_DIR}/${SCENARIO_NAME}_metrics.csv"
+docker cp fl-rest_server_1:/app/results/training_times.csv "${LOG_DIR}/${SCENARIO_NAME}_times.csv"
 echo "------------------------------------------------------------------"
