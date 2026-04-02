@@ -99,12 +99,15 @@ git clone [https://github.com/your-username/ASTRA-FL.git](https://github.com/you
 cd ASTRA-FL
 ```
 
-## Step 2: Ensure Docker is Running
+## Step 2: Ensure Docker is Running (CRITICAL)
+
+> ⚠️ **IMPORTANT:** This entire framework runs in isolated containers. **Docker MUST be running in the background** before you execute any scripts.
+
 Verify your Docker daemon is active and you have Docker Compose installed:
 
 ```bash
 docker-compose --version
-```
+# If this returns an error, start your Docker Desktop application or Docker daemon.
 
 ## Step 3: Verify Output Directories
 The master script will automatically generate these, but ensure your user has standard permissions:
@@ -248,7 +251,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for f
 ```text
 MIT License
 
-Copyright (c) 2025 [Authors]
+Copyright (c) 2025 [João et. al]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files...
