@@ -1,14 +1,14 @@
 # --- EXPERIMENT CONFIGURATION (Managed by run.sh) ---
-SCENARIO_NAME = "2_FedProx"
-FEDPROX_MU = 0.01
+SCENARIO_NAME = "5_MOON"
+FEDPROX_MU = 0.0
 KD_ALPHA = 0.0
 ENABLE_GRADUATION = False
 SEED = 999
 
 # --- MOON CONFIGURATION ---
 # (Default is 0.0/False. run.sh will change this to 1.0/5.0 when needed)
-MOON_MU = 0.0
-MOON_TEMPERATURE = 0.5 # Hyperparameter for the contrastive loss
+MOON_MU = 1.0
+MOON_TEMPERATURE = 0.3 # Hyperparameter for the contrastive loss
 
 # --- KNOWLEDGE DISTILLATION SETTINGS ---
 ENABLE_PARAMETER_BASED_KD = True 

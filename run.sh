@@ -12,13 +12,14 @@ set -e
  #FEDPROX_MU=0.0
  #KD_ALPHA=0.0
  #ENABLE_GRADUATION="False"
+ #MOON_MU=0.0
 
 # [CENÁRIO 2] FedProx (Baseline Forte)
- SCENARIO_NAME="2_FedProx"
- FEDPROX_MU=0.01
- KD_ALPHA=0.0
- ENABLE_GRADUATION="False"
- MOON_MU=0.0
+ #SCENARIO_NAME="2_FedProx"
+ #FEDPROX_MU=0.01
+ #KD_ALPHA=0.0
+ #ENABLE_GRADUATION="False"
+ #MOON_MU=0.0
 
 # [CENÁRIO 3] KD Constante (Sem Graduação - O "Vilão" da sua tese)
  #SCENARIO_NAME="3_KD_Constant"
@@ -34,16 +35,16 @@ set -e
 #MOON_MU=0.0 
 
 # [CENÁRIO 5] MOON (Contrastive Learning)
- #SCENARIO_NAME="5_MOON"
- #FEDPROX_MU=0.0
- #KD_ALPHA=0.0
- #ENABLE_GRADUATION="False"
- #MOON_MU=1.0           #<-- High weight is common for MOsON
- #MOON_TEMPERATURE=0.5
+ SCENARIO_NAME="5_MOON"
+ FEDPROX_MU=0.0
+ KD_ALPHA=0.0
+ ENABLE_GRADUATION="False"
+ MOON_MU=1.0           #<-- High weight is common for MOsON
+ MOON_TEMPERATURE=0.5
 
 
 # --- System Settings ---
-LOG_DIR="my_logs"
+LOG_DIR="results/logs"
 CONFIG_FILE="config.py"
 CLIENTS_HIGH_PERF=10 
 CLIENTS_LOW_PERF=10   
@@ -84,7 +85,7 @@ echo "🚀 Building images..."
 docker-compose build > /dev/null
 
 echo "📦 Preparing Data..."
-docker-compose run --rm server python3 prepare_data.py > /dev/null
+docker-compose run --rm server python3 scripts/setup/prepare_data.py > /dev/null
 
 # 3. Execution
 mkdir -p $LOG_DIR

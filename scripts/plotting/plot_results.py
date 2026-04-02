@@ -12,14 +12,14 @@ def load_data():
     
     # 1. NEW ASTRA SEED 42 (The one you just ran)
     # Ensure this file exists! You might need to rename it first if you haven't.
-    new_astra_path = "results_metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
+    new_astra_path = "../../results/metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
     if os.path.exists(new_astra_path):
         df = pd.read_csv(new_astra_path)
         df['method'] = "New ASTRA (Seed 42)"
         data.append(df)
     else:
         # Fallback: Check if it's still named generic 'metrics_Scenario4_Hybrid.csv'
-        fallback_path = "results_metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
+        fallback_path = "../../results/metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"
         if os.path.exists(fallback_path):
             print(f"⚠️  Found generic file '{fallback_path}'. Assuming it is Seed 42.")
             df = pd.read_csv(fallback_path)
@@ -29,7 +29,7 @@ def load_data():
             print("❌ Could not find Seed 42 data.")
 
     # 2. FEDPROX (Baseline)
-    fedprox_path = "results_metrics/metrics_Scenario2_FedProx.csv"
+    fedprox_path = "../../results/metrics/metrics_Scenario2_FedProx.csv"
     if os.path.exists(fedprox_path):
         df = pd.read_csv(fedprox_path)
         df['method'] = "FedProx"

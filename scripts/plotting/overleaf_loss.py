@@ -36,18 +36,18 @@ def load_data():
     all_data = []
     # SAME FILE LIST AS BEFORE
     files = [
-        ("ASTRA", "results_metrics/metrics_Scenario4_Hybrid_Seed10_new.csv"),
-        ("ASTRA", "results_metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"),
-        ("ASTRA", "results_metrics/metrics_Scenario4_Hybrid_Seed999_new.csv"),
-        ("MOON", "results_metrics/metrics_moon_seed10.csv"),
-        ("MOON", "results_metrics/metrics_moon_seed42.csv"),
-        ("MOON", "results_metrics/metrics_moon_seed999.csv"),
-        ("FedProx", "results_metrics/metrics_Scenario2_FedProx_Seed10.csv"),
-        ("FedProx", "results_metrics/metrics_Scenario2_FedProx.csv"),
-        ("FedProx", "results_metrics/metrics_Scenario2_FedProx_Seed999.csv"),
-        ("FedAvg", "results_metrics/metrics_Scenario1_FedAvg_Seed10.csv"),
-        ("FedAvg", "results_metrics/metrics_Scenario1_FedAvg.csv"),
-        ("FedAvg", "results_metrics/metrics_Scenario1_FedAvg_Seed999.csv"),
+        ("ASTRA", "../../results/metrics/metrics_Scenario4_Hybrid_Seed10_new.csv"),
+        ("ASTRA", "../../results/metrics/metrics_Scenario4_Hybrid_Seed42_new.csv"),
+        ("ASTRA", "../../results/metrics/metrics_Scenario4_Hybrid_Seed999_new.csv"),
+        ("MOON", "../../results/metrics/metrics_moon_seed10.csv"),
+        ("MOON", "../../results/metrics/metrics_moon_seed42.csv"),
+        ("MOON", "../../results/metrics/metrics_moon_seed999.csv"),
+        ("FedProx", "../../results/metrics/metrics_Scenario2_FedProx_Seed10.csv"),
+        ("FedProx", "../../results/metrics/metrics_Scenario2_FedProx.csv"),
+        ("FedProx", "../../results/metrics/metrics_Scenario2_FedProx_Seed999.csv"),
+        ("FedAvg", "../../results/metrics/metrics_Scenario1_FedAvg_Seed10.csv"),
+        ("FedAvg", "../../results/metrics/metrics_Scenario1_FedAvg.csv"),
+        ("FedAvg", "../../results/metrics/metrics_Scenario1_FedAvg_Seed999.csv"),
     ]
 
     print("--- Loading Loss Data ---")

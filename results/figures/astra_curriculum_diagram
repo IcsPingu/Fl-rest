@@ -1,0 +1,52 @@
+// ASTRA Curriculum Logic
+digraph astra_curriculum {
+	fontname=Helvetica fontsize=24 label="ASTRA Curriculum Framework" labelloc=t nodesep=0.8 rankdir=TB ranksep=1.0 splines=polyline
+	node [color="#333333" fillcolor="#FFFFFF" fontname=Helvetica fontsize=20 margin="0.3,0.1" penwidth=2.0 shape=box style="rounded,filled"]
+	edge [arrowhead=vee arrowsize=1.5 color="#333333" fontname=Helvetica fontsize=16 penwidth=2.0]
+	subgraph cluster_inputs {
+		style=invis
+		GlobalModel [label="Global Model
+(w_t)" fillcolor="#E0E0E0" shape=cylinder]
+		Input [label="Input Batch
+(x, y)" fillcolor="#E0E0E0" shape=parallelogram]
+	}
+	Curriculum [label="Curriculum Gate
+(Is Teacher Active?)" fillcolor="#FFF8DC" shape=diamond]
+	subgraph cluster_models {
+		style=invis
+		Teacher [label="Frozen Teacher
+(w_teach)" fillcolor="#F8F8F8" style="dashed,filled"]
+		Student [label="Active Student
+(w_k)" fillcolor="#E6F3FF"]
+	}
+	subgraph cluster_losses {
+		style=invis
+		KD_Loss [label="Distillation Loss
+(L_KD)" shape=ellipse]
+		Prox_Loss [label="Proximal Loss
+(L_Prox)" shape=ellipse]
+		CE_Loss [label="CE Loss
+(L_CE)" shape=ellipse]
+	}
+	TotalLoss [label="Total Loss
+(L_ASTRA)" fillcolor="#D0D0D0" fontsize=22 fontweight=bold shape=box style=filled]
+	Update [label="Weight Update
+(w_k ← w_k - η∇L)" fillcolor="#D0D0D0" shape=box style=filled]
+	GlobalModel -> Curriculum [label="Round t"]
+	GlobalModel -> Student [style=dashed]
+	Input -> Student
+	Curriculum -> Teacher [label="YES
+(Bootcamp/Correction)" color=black style=bold]
+	GlobalModel -> Teacher [style=dashed]
+	Input -> Teacher
+	Teacher -> KD_Loss [label="Logits (z_t)"]
+	Student -> KD_Loss [label="Logits (z_s)"]
+	Student -> CE_Loss [label="Logits (z_s)"]
+	Input -> CE_Loss [label="Labels (y)"]
+	Student -> Prox_Loss [label="Weights (w_k)"]
+	GlobalModel -> Prox_Loss [label="Reference (w_t)"]
+	KD_Loss -> TotalLoss [label="+ α_t"]
+	Prox_Loss -> TotalLoss [label="+ μ/2"]
+	CE_Loss -> TotalLoss
+	TotalLoss -> Update
+}
