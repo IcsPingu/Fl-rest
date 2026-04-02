@@ -259,5 +259,5 @@ of this software and associated documentation files...
 ## References
 
 1. Sousa, J., et al. "Enhancing robustness in federated learning using minimal repair and dynamic adaptation" - *Annals of Telecommunications* (2025)
-2. [Authors]. "ASTRA-FL: Proactive Client Selection and Distillation for Vehicular Federated Learning" - *[Conference/Journal]*
+2. [João et. al]. "ASTRA-FL: Proactive Client Selection and Distillation for Vehicular Federated Learning" - *[SBRC 2026]*
 ```
